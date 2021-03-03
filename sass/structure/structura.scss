@@ -1,0 +1,39 @@
+body
+{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    //overflow: hidden;
+    grid-template-columns: 5rem auto 5rem;
+    grid-template-rows: 5rem auto 5rem;
+    grid-template-areas: 
+    "head head head"
+    "left body rigth"
+    "foot foot foot"
+    ;
+}
+
+.head
+{
+    grid-area: head; background-color: blueviolet;
+}
+
+.networks
+{
+    grid-area: left; background-color: burlywood;
+}
+
+.body 
+{
+    grid-area: body; background-color: cadetblue;
+}
+
+.cv
+{
+    grid-area: rigth; background-color: cornflowerblue;
+}
+
+.foot 
+{
+    grid-area: foot; background-color: crimson;
+}
