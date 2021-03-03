@@ -1,0 +1,113 @@
+* {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
+  font-size: 65.2%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header {
+  width: 100vw;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 5rem;
+  overflow: hidden;
+}
+.header .header__logo {
+  font-size: 3.2rem;
+}
+.header .header__menu {
+  width: 65rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.header .header__menu #join, .header .header__menu #join2 {
+  width: 3rem;
+  height: 2rem;
+  position: absolute;
+  visibility: hidden;
+}
+.header .header__menu #join:checked ~ .menu-icon > .icon--close,
+.header .header__menu #join2:checked ~ .menu-icon > .icon--close {
+  display: none;
+}
+.header .header__menu #join:checked ~ .menu-icon > .icon--open,
+.header .header__menu #join2:checked ~ .menu-icon > .icon--open {
+  display: block;
+}
+.header .header__menu #join:checked ~ .menu-container1 {
+  transform: translateX(0%);
+  opacity: 1;
+}
+.header .header__menu #join2:checked ~ .menu-container2 {
+  transform: translateY(0%);
+  opacity: 1;
+}
+.header .header__menu .menu-icon .material-icons {
+  font-size: 2.6rem;
+  transition: 0.5s;
+}
+.header .header__menu .menu-icon > .material-icons:hover {
+  cursor: pointer;
+  color: orangered;
+  font-size: 3.6rem;
+}
+.header .header__menu .menu-icon .icon--close {
+  display: initial;
+}
+.header .header__menu .menu-icon .icon--open {
+  display: none;
+}
+.header .header__menu .menu-container1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateX(110%);
+  transition: 3s;
+}
+.header .header__menu .menu-container1 .menu-item {
+  width: 15rem;
+  display: block;
+  margin: 0rem 2rem;
+}
+.header .header__menu .menu-container2 {
+  height: 17rem;
+  display: block;
+  position: absolute;
+  right: 8rem;
+  top: 10rem;
+  opacity: 0;
+  transform: translateY(-110%);
+  transition: 3s;
+}
+.header .header__menu .menu-container2 .menu-item {
+  width: 15rem;
+  height: 3rem;
+  display: block;
+  margin: 1rem 2rem;
+  text-align: right;
+}
+.header .header__menu .menu-link {
+  font-size: 1.6rem;
+  transition: 1s;
+}
+.header .header__menu .menu-link:hover {
+  font-size: 2.2rem;
+  color: orangered;
+}
+
+/*# sourceMappingURL=menu1.css.map */
