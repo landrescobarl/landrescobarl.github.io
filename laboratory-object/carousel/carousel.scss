@@ -1,0 +1,52 @@
+
+.network
+{
+    width: 3rem;
+    height: 80vh;
+    border: solid 0.1rem #ccc ;
+    position: relative;
+    top: 2rem;
+    left: 3rem;
+
+    @keyframes cambio {
+        0% {top: -170%;}
+        100% {top: 100%;}
+    }
+
+    .network__carousel
+    {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 3rem;
+        height: 165%;
+        animation: cambio 20s infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        border: tomato solid 1px;
+
+        .carousel-slide 
+        {
+            width: 16rem;
+            margin: 7rem;
+            transform: rotate(-90deg);
+            position: relative;   
+            text-align: center;
+            border:  springgreen solid 1px;    
+        }
+
+        a
+        {
+            font-size: 1.6rem;
+        }
+
+        a:hover
+        {
+            font-size: 2.2rem;
+            color: coral;
+            font-weight: 600;
+        }
+    }
+
+}
