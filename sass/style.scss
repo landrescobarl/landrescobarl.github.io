@@ -6,11 +6,25 @@
     font-size: 65.2%;
 }
 
+li
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+
 /*
 *    @import styles sass
 */
 
 @import "structure/structura.scss";
+@import "head/menu";
+@import "head/menu1";
 
 
 
@@ -22,18 +36,19 @@
 @media only screen and (min-width: 320px) and (max-width: 425px) 
 {
     @import "structure/screen-320";
+    @import "head/menu2";
 }
 
 // movil-b
-@media only screen and (min-width: 425px) and (max-width: 767px) 
+@media only screen and (min-width: 425px) and (max-width: 768px) 
 {
-    
+    @import "head/menu2";
 }
 
 // movil/table
 @media only screen and (min-width: 768px) and (max-width: 1024px) 
 {
-    
+
 }
 
 // table/laptop
@@ -43,7 +58,7 @@
 }
 
 // laptop/desktop
-@media only screen and (min-width: 1440px) and (max-width: 1920px) 
+@media only screen and (min-width: 1440px)
 {
     @import "structure/screen-1440";
 }
