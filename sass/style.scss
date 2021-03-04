@@ -23,8 +23,8 @@ a
 */
 
 @import "structure/structura.scss";
-@import "head/menu";
-@import "head/menu1";
+@import "head/head";
+@import "network/network";
 
 
 
@@ -37,12 +37,14 @@ a
 {
     @import "structure/screen-320";
     @import "head/menu2";
+    @import "network/carousel-320";
 }
 
 // movil-b
 @media only screen and (min-width: 425px) and (max-width: 768px) 
 {
     @import "head/menu2";
+    @import "network/carousel-320";
 }
 
 // movil/table
@@ -68,3 +70,11 @@ a
 */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:ital,wght@0,400;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
+:root {
+    --color-blue:  #069FFA;
+    --family-open: 'Open Sans', sans-serif; 
+    --family-Raleway: 'Raleway', sans-serif;
+    --family-kalam: 'Kalam', cursive;
+  }
+  

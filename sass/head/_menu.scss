@@ -35,7 +35,7 @@
             >.material-icons:hover
             {
                 cursor: pointer;
-                color: orangered;
+                color: var(--color-blue);
                 font-size: 3.6rem;
             }
 
@@ -65,7 +65,7 @@
             .menu-link:hover
             {
                 font-size: 2.2rem;
-                color: orangered;
+                color: var(--color-blue);
             }
         }
     }  
