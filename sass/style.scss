@@ -6,11 +6,25 @@
     font-size: 65.2%;
 }
 
+li
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+
 /*
 *    @import styles sass
 */
 
 @import "structure/structura.scss";
+@import "head/head";
+@import "network/network";
 
 
 
@@ -22,18 +36,21 @@
 @media only screen and (min-width: 320px) and (max-width: 425px) 
 {
     @import "structure/screen-320";
+    @import "head/menu2";
+    @import "network/carousel-320";
 }
 
 // movil-b
-@media only screen and (min-width: 425px) and (max-width: 767px) 
+@media only screen and (min-width: 425px) and (max-width: 768px) 
 {
-    
+    @import "head/menu2";
+    @import "network/carousel-320";
 }
 
 // movil/table
 @media only screen and (min-width: 768px) and (max-width: 1024px) 
 {
-    
+
 }
 
 // table/laptop
@@ -43,7 +60,7 @@
 }
 
 // laptop/desktop
-@media only screen and (min-width: 1440px) and (max-width: 1920px) 
+@media only screen and (min-width: 1440px)
 {
     @import "structure/screen-1440";
 }
@@ -53,3 +70,22 @@
 */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:ital,wght@0,400;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
+:root {
+    --color-blue:  #069FFA;
+    --family-open: 'Open Sans', sans-serif; 
+    --family-Raleway: 'Raleway', sans-serif;
+    --family-kalam: 'Kalam', cursive;
+  }
+  
+  .mantenimiento
+  {
+      width: 100%;
+      height: 100%;
+      top: 0rem;
+      left: 0rem;
+      background-image: url(/img/20945893.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+  }

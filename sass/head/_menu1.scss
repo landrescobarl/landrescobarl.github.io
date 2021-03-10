@@ -1,0 +1,26 @@
+
+// MENU1
+.header
+{
+    padding: 0rem 5rem;
+
+    .header__menu
+    {
+        width: 55rem;
+
+        .menu-container
+        {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            transform: translateX(110%);
+
+            .menu-item
+            {
+                width: 13rem;
+                display: block;
+            }
+        } 
+    }
+}

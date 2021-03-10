@@ -13,27 +13,27 @@ body
     ;
 }
 
-.head
+.header
 {
-    grid-area: head; background-color: blueviolet;
+    grid-area: head;
 }
 
-.networks
+.network
 {
-    grid-area: left; background-color: burlywood;
+    grid-area: left; 
 }
 
 .body 
 {
-    grid-area: body; background-color: cadetblue;
+    grid-area: body;
 }
 
 .cv
 {
-    grid-area: rigth; background-color: cornflowerblue;
+    grid-area: rigth; 
 }
 
 .foot 
 {
-    grid-area: foot; background-color: crimson;
+    grid-area: foot; 
 }
