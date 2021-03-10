@@ -1,0 +1,46 @@
+.puzzle
+{
+    border: solid 1px springgreen;
+    padding: 1rem;
+    width: 30rem;
+    margin: 5rem auto;
+
+    .puzzle-item
+    {
+        border:  solid 1px;
+    }
+
+    h1
+    {
+        border: steelblue solid 1px;
+        font-size: 3.2rem;
+        display: flex;
+        justify-content: center;
+
+        :last-child
+        {
+            color: yellowgreen;
+        }
+    }
+
+    h2
+    {
+        border: tomato solid 1px;
+        font-size: 2.2rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .text
+    {
+        border: violet solid 1px;
+        display: flex;
+        font-size: 1.6rem;
+        
+        >div
+        {
+            font-size: 1.6rem;
+        }
+    }
+}
