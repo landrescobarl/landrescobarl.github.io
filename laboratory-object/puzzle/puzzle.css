@@ -1,35 +1,122 @@
+:root {
+  --color-blue: #069FFA;
+  --color-yello: #FAF51E;
+}
+
 .puzzle {
-  border: solid 1px springgreen;
-  padding: 1rem;
-  width: 30rem;
-  margin: 5rem auto;
+  position: relative;
+  border: blue solid 1px;
 }
-.puzzle .puzzle-item {
-  border: solid 1px;
+.puzzle .puzzle-piece {
+  display: grid;
+  grid-template-columns: repeat(3, 5rem);
+  grid-template-rows: repeat(3, 5rem);
+  position: absolute;
 }
-.puzzle h1 {
-  border: steelblue solid 1px;
-  font-size: 3.2rem;
-  display: flex;
-  justify-content: center;
+.puzzle .puzzle-piece .puzzle-item {
+  border: #FFF solid 0.5px;
+  border-radius: 0.3rem;
 }
-.puzzle h1 :last-child {
-  color: yellowgreen;
+.puzzle .puzzle-piece .item-a {
+  grid-area: a;
 }
-.puzzle h2 {
-  border: tomato solid 1px;
-  font-size: 2.2rem;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.puzzle .puzzle-piece .item-b {
+  grid-area: b;
 }
-.puzzle .text {
-  border: violet solid 1px;
-  display: flex;
-  font-size: 1.6rem;
+.puzzle .puzzle-piece .item-c {
+  grid-area: c;
 }
-.puzzle .text > div {
-  font-size: 1.6rem;
+.puzzle .puzzle-piece .item-d {
+  grid-area: d;
+}
+.puzzle .puzzle-piece .item-e {
+  grid-area: e;
+}
+.puzzle .puzzle-piece .item-f {
+  grid-area: f;
+}
+.puzzle .piece-6, .puzzle .piece-8, .puzzle .piece-9, .puzzle .piece-13 {
+  width: 20rem;
+  height: 20rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.puzzle .piece-1 .puzzle-item, .puzzle .piece-3 .puzzle-item, .puzzle .piece-11 .puzzle-item {
+  border: var(--color-blue) solid 0.1rem;
+}
+.puzzle .piece-5 .puzzle-item, .puzzle .piece-7 .puzzle-item {
+  border: var(--color-yello) solid 0.1rem;
+}
+.puzzle .piece-6 .puzzle-item, .puzzle .piece-8 .puzzle-item, .puzzle .piece-9 .puzzle-item, .puzzle .piece-13 .puzzle-item {
+  background-color: var(--color-yello);
+}
+.puzzle .piece-2 .puzzle-item, .puzzle .piece-4 .puzzle-item, .puzzle .piece-10 .puzzle-item, .puzzle .piece-12 .puzzle-item {
+  background-color: var(--color-blue);
+}
+.puzzle .piece-1 {
+  grid-template-areas: "a b c" "d . ." ". . .";
+  top: 0rem;
+  left: 0rem;
+}
+.puzzle .piece-2 {
+  grid-template-areas: ". a ." ". b c" "d e .";
+  top: 5rem;
+  left: 0rem;
+}
+.puzzle .piece-3 {
+  grid-template-areas: ". . a" "b c d" "e . .";
+  top: 15rem;
+  left: 0rem;
+}
+.puzzle .piece-4 {
+  grid-template-areas: ". a b" "c d ." "e . .";
+  top: 25rem;
+  left: 0rem;
+}
+.puzzle .piece-5 {
+  grid-template-areas: ". a ." "b c d" ". e .";
+  top: 0rem;
+  left: 10rem;
+}
+.puzzle .piece-6 {
+  grid-template-areas: ". . a ." ". c b ." ". d . ." ". e . .";
+  top: 10rem;
+  left: 10rem;
+}
+.puzzle .piece-7 {
+  grid-template-areas: ". a ." ". b ." "c d e";
+  top: 20rem;
+  left: 15rem;
+}
+.puzzle .piece-8 {
+  grid-template-areas: ". . . ." ". . . ." ". a . ." "b c d e";
+  top: 20rem;
+  left: 5rem;
+}
+.puzzle .piece-9 {
+  grid-template-areas: "a b c d" ". . . e" ". . . ." ". . . .";
+  top: 0rem;
+  left: 20rem;
+}
+.puzzle .piece-10 {
+  grid-template-areas: "a b ." "c d e" ". . f";
+  top: 5rem;
+  left: 25rem;
+}
+.puzzle .piece-11 {
+  grid-template-areas: "a b ." "c d ." ". . .";
+  top: 15rem;
+  left: 25rem;
+}
+.puzzle .piece-12 {
+  grid-template-areas: "a b ." ". c ." "d e .";
+  top: 25rem;
+  left: 25rem;
+}
+.puzzle .piece-13 {
+  grid-template-areas: ". . . a" ". . . b" ". . . c" ". . . d";
+  top: 20rem;
+  left: 20rem;
 }
 
 /*# sourceMappingURL=puzzle.css.map */
