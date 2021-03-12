@@ -4,14 +4,19 @@
 }
 
 .puzzle {
+  width: 40rem;
+  height: 40rem;
   position: relative;
-  border: blue solid 1px;
+  display: flex;
+  top: 15vh;
+  left: 35vw;
 }
 .puzzle .puzzle-piece {
   display: grid;
   grid-template-columns: repeat(3, 5rem);
   grid-template-rows: repeat(3, 5rem);
   position: absolute;
+  transition: all 3s;
 }
 .puzzle .puzzle-piece .puzzle-item {
   border: #FFF solid 0.5px;
@@ -54,7 +59,7 @@
   background-color: var(--color-blue);
 }
 .puzzle .piece-1 {
-  grid-template-areas: "a b c" "d . ." ". . .";
+  grid-template-areas: "a b c" "d . ." "e . .";
   top: 0rem;
   left: 0rem;
 }
@@ -117,6 +122,115 @@
   grid-template-areas: ". . . a" ". . . b" ". . . c" ". . . d";
   top: 20rem;
   left: 20rem;
+}
+.puzzle #puzzle-buttom {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  opacity: 0;
+  z-index: 2;
+  top: 45%;
+  left: 45%;
+}
+.puzzle #puzzle-buttom:checked {
+  transform: translateY(-550%);
+}
+.puzzle #puzzle-buttom:checked ~ .puzzle-icons {
+  transform: translateY(-550%);
+}
+.puzzle #puzzle-buttom:checked ~ .puzzle-icons > .icons--close {
+  display: block;
+}
+.puzzle #puzzle-buttom:checked ~ .puzzle-icons > .icons--open {
+  display: none;
+}
+.puzzle #puzzle-buttom:checked ~ .piece-1 {
+  top: -15%;
+  left: -20%;
+  transform: rotate(-45deg);
+}
+.puzzle #puzzle-buttom:checked ~ .piece-2 {
+  top: 20%;
+  left: -50%;
+  transform: rotate(45deg);
+}
+.puzzle #puzzle-buttom:checked ~ .piece-3 {
+  top: 40%;
+  left: -30%;
+  transform: rotate(-30deg);
+}
+.puzzle #puzzle-buttom:checked ~ .piece-4 {
+  top: 80%;
+  left: -30%;
+  transform: rotate(30deg);
+}
+.puzzle #puzzle-buttom:checked ~ .piece-5 {
+  top: -35%;
+  left: 10%;
+  transform: rotate(-30deg);
+}
+.puzzle #puzzle-buttom:checked ~ .piece-6 {
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+.puzzle #puzzle-buttom:checked ~ .piece-7 {
+  top: 100%;
+  left: 30%;
+  transform: rotate(-130deg);
+}
+.puzzle #puzzle-buttom:checked ~ .piece-8 {
+  top: 100%;
+  left: 0%;
+  transform: rotate(130deg);
+}
+.puzzle #puzzle-buttom:checked ~ .piece-9 {
+  top: -20%;
+  left: 60%;
+  transform: rotate(-45deg);
+}
+.puzzle #puzzle-buttom:checked ~ .piece-10 {
+  top: 10%;
+  left: 90%;
+  transform: rotate(45deg);
+}
+.puzzle #puzzle-buttom:checked ~ .piece-11 {
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+.puzzle #puzzle-buttom:checked ~ .piece-12 {
+  top: 100%;
+  left: 75%;
+  transform: rotate(-10deg);
+}
+.puzzle #puzzle-buttom:checked ~ .piece-13 {
+  top: 60%;
+  left: 60%;
+  transform: rotate(-10deg);
+}
+.puzzle #puzzle-buttom:hover ~ .puzzle-icons > .material-icons {
+  transform: scale(1.5, 1.5);
+  background-color: rgba(6, 159, 250, 0.3);
+  border: var(--color-blue) solid 0.1rem;
+}
+.puzzle .puzzle-icons {
+  position: absolute;
+  transition: all 2s;
+  z-index: 1;
+  top: 45%;
+  left: 45%;
+}
+.puzzle .puzzle-icons .material-icons {
+  font-size: 4.2rem;
+  color: #323232;
+  transition: all 1s;
+  border-radius: 0.5rem;
+}
+.puzzle .puzzle-icons .icons--close {
+  display: none;
+  color: #a1a1a1;
+}
+.puzzle .puzzle-icons .icons--open {
+  display: block;
 }
 
 /*# sourceMappingURL=puzzle.css.map */
