@@ -1,0 +1,152 @@
+.home__puzzle 
+{
+    width: 30rem;
+    height: 30rem;
+    top: 5rem;
+
+    .puzzle-piece
+    {
+        grid-template-columns: repeat(3, 37.5px);
+        grid-template-rows: repeat(3, 37.5px);
+    }
+
+    .piece-6, .piece-8, .piece-9, .piece-13
+    {
+        grid-template-columns: repeat(4, 37.5px);
+        grid-template-rows: repeat(4, 37.5px);
+    }
+
+    .piece-1
+    {
+        top: 0rem;
+        left: 0rem;
+    }
+
+    .piece-2
+    {
+        top: 3.7rem;
+        left: 0rem;
+    }
+
+    .piece-3
+    {
+        top: 11.2rem;
+        left: 0rem;
+    }
+
+    .piece-4
+    {
+        top: 18.7rem;
+        left: 0rem;
+    }
+
+    .piece-5
+    {
+        top: 0rem;
+        left: 7.5rem;
+    }
+
+    .piece-6
+    {
+        top: 7.5rem;
+        left: 7.5rem;
+    }
+
+    .piece-7
+    {
+        top: 15rem;
+        left: 11.2rem;
+    }
+
+    .piece-8
+    {
+        top: 14.9rem;
+        left: 3.7rem;
+    }
+
+    .piece-9
+    {
+        top: 0rem;
+        left: 15rem;
+        
+    }
+
+    .piece-10
+    {
+        top: 3.7rem;
+        left: 18.7rem;
+    }
+
+    .piece-11
+    {
+        top: 11.2rem;
+        left: 18.7rem;
+    }
+
+    .piece-12
+    {
+        top: 18.7rem;
+        left: 18.7rem;
+    }
+
+    .piece-13
+    {
+        top: 14.9rem;
+        left: 14.9rem;
+    }
+
+    #puzzle-buttom:checked ~ .piece-3
+    {
+        top: 40%;
+        left: -36%;
+        transform: rotate(-30deg);
+    }
+
+    #puzzle-buttom:checked ~ .piece-5
+    {
+        top: -45%;
+    }
+
+    #puzzle-buttom:checked ~ .piece-8
+    {
+        top: 100%;
+        left: 3%;
+        transform: rotate(130deg);
+    }
+
+    #puzzle-buttom:checked ~ .piece-9
+    {
+        top: -35%;
+        left: 50%;
+        transform: rotate(20deg);
+    }
+
+    #puzzle-buttom:checked ~ .piece-10
+    {
+        top: 10%;
+        left: 90%;
+        transform: rotate(45deg);
+    }
+
+    #puzzle-buttom:checked ~ .piece-11
+    {
+        opacity: 0;
+        transform: rotate(-90deg);
+    }
+
+    #puzzle-buttom:checked ~ .piece-12
+    {
+        top: 90%;
+        left: 80%;
+        transform: rotate(-10deg);
+    }
+
+    #puzzle-buttom:checked ~ .piece-13
+    {
+        top: 70%;
+        left: 70%;
+        transform: rotate(-20deg);
+    }
+
+}
+

@@ -3,7 +3,7 @@
     margin: 0rem;
     box-sizing: border-box;
     padding: 0rem;
-    font-size: 65.2%;
+    font-size: 62.5%;
 }
 
 li
@@ -25,6 +25,8 @@ a
 @import "structure/structura.scss";
 @import "head/head";
 @import "network/network";
+@import "main/home/puzzle.scss";
+@import "main/main";
 
 
 
@@ -38,13 +40,16 @@ a
     @import "structure/screen-320";
     @import "head/menu2";
     @import "network/carousel-320";
+    @import "main/main-320";
+    @import "main/home/puzzle-320";
 }
 
 // movil-b
 @media only screen and (min-width: 425px) and (max-width: 768px) 
 {
     @import "head/menu2";
-    @import "network/carousel-320";
+    @import "main/main-425";
+    @import "main/home/puzzle-425";
 }
 
 // movil/table
@@ -73,6 +78,8 @@ a
 
 :root {
     --color-blue:  #069FFA;
+    --color-yello: #FAF51E;
+    --color-black: #323232;
     --family-open: 'Open Sans', sans-serif; 
     --family-Raleway: 'Raleway', sans-serif;
     --family-kalam: 'Kalam', cursive;

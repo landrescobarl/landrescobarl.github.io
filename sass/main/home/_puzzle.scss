@@ -1,0 +1,389 @@
+
+.home__puzzle 
+{
+    width: 50rem;
+    height: 50rem;
+    position: relative;
+    display: flex; 
+
+    .puzzle-piece
+    {
+        display: grid;
+        grid-template-columns: repeat(3, 62.5px);
+        grid-template-rows: repeat(3, 62.5px);
+        position: absolute;
+        transition: all 3s;
+
+        .puzzle-item
+        {
+            border: #FFF solid 2px;
+            border-radius: 0.3rem;
+        }
+
+        .item-a
+        {
+            grid-area: a;
+        }
+    
+        .item-b
+        {
+            grid-area: b;
+        }
+    
+        .item-c
+        {
+            grid-area: c;
+        }
+
+        .item-d
+        {
+            grid-area: d;
+        }
+
+        .item-e
+        {
+            grid-area: e;
+        }
+
+        .item-f
+        {
+            grid-area: f;
+        }
+
+
+    }
+
+    .piece-6, .piece-8, .piece-9, .piece-13
+    {
+        grid-template-columns: repeat(4, 62.5px);
+        grid-template-rows: repeat(4, 62.5px);
+    }
+
+    .piece-1, .piece-3, .piece-11
+    {
+        .puzzle-item
+        {
+            border: var(--color-blue) solid 0.2rem;
+        }
+        
+    }
+
+    .piece-5, .piece-7
+    {
+        .puzzle-item
+        {
+            border: var(--color-yello) solid 0.2rem;
+        }
+    }
+
+    .piece-6, .piece-8, .piece-9, .piece-13
+    {
+        .puzzle-item
+        {
+            background-color: var(--color-yello);
+        }
+    }
+
+    .piece-2, .piece-4, .piece-10, .piece-12
+    {
+        .puzzle-item
+        {
+            background-color: var(--color-blue);
+        }
+    }
+
+
+    .piece-1
+    {
+        grid-template-areas: 
+        "a b c"
+        "d . ."
+        "e . .";
+        top: 0rem;
+        left: 0rem;
+    }
+
+    .piece-2
+    {
+        grid-template-areas: 
+        ". a ."
+        ". b c"
+        "d e .";
+        top: 6.2rem;
+        left: 0rem;
+    }
+
+    .piece-3
+    {
+        grid-template-areas: 
+        ". . a"
+        "b c d"
+        "e . .";
+        top: 18.8rem;
+        left: 0rem;
+    }
+
+    .piece-4
+    {
+        grid-template-areas: 
+        ". a b"
+        "c d ."
+        "e . .";
+        top: 31.3rem;
+        left: 0rem;
+    }
+
+    .piece-5
+    {
+        grid-template-areas: 
+        ". a ."
+        "b c d"
+        ". e .";
+        top: 0rem;
+        left: 12.5rem;
+    }
+
+    .piece-6
+    {
+        grid-template-areas: 
+        ". . a ."
+        ". c b ."
+        ". d . ."
+        ". e . .";
+        top: 12.5rem;
+        left: 12.5rem;
+    }
+
+    .piece-7
+    {
+        grid-template-areas: 
+        ". a ."
+        ". b ."
+        "c d e";
+        top: 25rem;
+        left: 18.7rem;
+    }
+
+    .piece-8
+    {
+        grid-template-areas: 
+        ". . . ."
+        ". . . ."
+        ". a . ."
+        "b c d e";
+        top: 25rem;
+        left: 6.2rem;
+    }
+
+    .piece-9
+    {
+        grid-template-areas: 
+        "a b c d"
+        ". . . e"
+        ". . . ."
+        ". . . .";
+        top: 0rem;
+        left: 25rem;
+        
+    }
+
+    .piece-10
+    {
+        grid-template-areas: 
+        "a b ."
+        "c d e"
+        ". . f";
+        top: 6.2rem;
+        left: 31.3rem;
+    }
+
+    .piece-11
+    {
+        grid-template-areas: 
+        "a b ."
+        "c d ."
+        ". . .";
+        top: 18.8rem;
+        left: 31.2rem;
+    }
+
+    .piece-12
+    {
+        grid-template-areas: 
+        "a b ."
+        ". c ."
+        "d e .";
+        top: 31.3rem;
+        left: 31.2rem;
+    }
+
+    .piece-13
+    {
+        grid-template-areas: 
+        ". . . a"
+        ". . . b"
+        ". . . c"
+        ". . . d";
+        top: 25rem;
+        left: 25rem;
+    }
+
+    #puzzle-buttom
+    {
+        width: 4rem;
+        height: 4rem;
+        position: absolute;
+        opacity: 0;
+        z-index: 2;
+        top: 45%;
+        left: 45%;
+    }
+
+    #puzzle-buttom:checked
+    {
+        transform: translateY(-450%);
+    }
+
+    #puzzle-buttom:checked ~ .puzzle-icons
+    {
+        transform: translateY(-450%);
+    }
+
+    #puzzle-buttom:checked ~ .puzzle-icons>.icons--close
+    {
+        display: block;
+    }
+
+    #puzzle-buttom:checked ~ .puzzle-icons>.icons--open
+    {
+        display: none;
+    }
+
+    #puzzle-buttom:checked ~ .piece-1
+    {
+        top: -15%;
+        left: -20%;
+        transform: rotate(-45deg);
+    }
+
+    #puzzle-buttom:checked ~ .piece-2
+    {
+        top: 20%;
+        left: -50%;
+        transform: rotate(45deg);
+    }
+
+    #puzzle-buttom:checked ~ .piece-3
+    {
+        top: 40%;
+        left: -30%;
+        transform: rotate(-30deg);
+    }
+
+    #puzzle-buttom:checked ~ .piece-4
+    {
+        top: 80%;
+        left: -30%;
+        transform: rotate(30deg);
+    }
+
+    #puzzle-buttom:checked ~ .piece-5
+    {
+        top: -35%;
+        left: 10%;
+        transform: rotate(-30deg);
+    }
+
+    #puzzle-buttom:checked ~ .piece-6
+    {
+        opacity: 0;
+        transform: rotate(-90deg);
+    }
+
+    #puzzle-buttom:checked ~ .piece-7
+    {
+        top: 90%;
+        left: 30%;
+        transform: rotate(-150deg);
+    }
+
+    #puzzle-buttom:checked ~ .piece-8
+    {
+        top: 100%;
+        left: 15%;
+        transform: rotate(130deg);
+    }
+
+    #puzzle-buttom:checked ~ .piece-9
+    {
+        top: -20%;
+        left: 60%;
+        transform: rotate(-20deg);
+    }
+
+    #puzzle-buttom:checked ~ .piece-10
+    {
+        top: 10%;
+        left: 90%;
+        transform: rotate(45deg);
+    }
+
+    #puzzle-buttom:checked ~ .piece-11
+    {
+        opacity: 0;
+        transform: rotate(-90deg);
+    }
+
+    #puzzle-buttom:checked ~ .piece-12
+    {
+        top: 90%;
+        left: 80%;
+        transform: rotate(-10deg);
+    }
+
+    #puzzle-buttom:checked ~ .piece-13
+    {
+        top: 70%;
+        left: 70%;
+        transform: rotate(-20deg);
+    }
+
+    #puzzle-buttom:hover ~ .puzzle-icons>.material-icons
+    {
+        transform: scale(1.5, 1.5);
+        background-color: rgba(6, 159, 250, 0.3);
+        border: var(--color-blue) solid 0.1rem;
+    }
+
+    .puzzle-icons
+    {
+        position: absolute;
+        transition: all 2s;
+        z-index: 1;
+        top: 45%;
+        left: 45%;
+        
+
+        .material-icons
+        {
+            font-size: 4.2rem;
+            color: #323232;
+            transition: all 1s;
+            border-radius: 0.5rem;
+        }
+
+        .icons--close
+        {
+            display: none;
+            color: rgb(161, 161, 161);
+        }
+
+        .icons--open
+        {
+            display: block;
+        }
+
+    }
+
+}
+

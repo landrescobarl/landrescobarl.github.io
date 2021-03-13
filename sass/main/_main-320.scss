@@ -1,0 +1,48 @@
+
+#puzzle-buttom:checked ~ .home__text
+{
+    display: block;
+    opacity: 1;
+}
+
+.home__text
+    
+{
+    width: 250px;
+    z-index: -1;
+    display: none;
+    opacity: 0;
+    transition: all 2s;
+    transition-delay: 1s;
+
+    .text-greet
+    {
+        position: relative;
+        top: -4.5rem;
+    }
+
+    .text-profession
+    {
+        position: relative;
+        top: 5rem;
+    }
+    .text-slogan
+    {
+        position: relative;
+        top: 15rem;
+    }
+}
+
+.body__home .home__text .text-greet b,
+.body__home .home__text .text-greet strong,
+.body__home .home__text .text-greet strong #andres {
+    font-size: 2.2rem;
+}
+
+.body__home .home__text .text-profession {
+    font-size: 1.8rem;
+}
+
+.body__home .home__text .text-slogan {
+    font-size: 1.4rem;
+}

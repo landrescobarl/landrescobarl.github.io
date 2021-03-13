@@ -4,7 +4,7 @@
   margin: 0rem;
   box-sizing: border-box;
   padding: 0rem;
-  font-size: 65.2%;
+  font-size: 62.5%;
 }
 
 li {
@@ -191,6 +191,270 @@ body {
   margin: 0.5rem;
 }
 
+.home__puzzle {
+  width: 50rem;
+  height: 50rem;
+  position: relative;
+  display: flex;
+}
+.home__puzzle .puzzle-piece {
+  display: grid;
+  grid-template-columns: repeat(3, 62.5px);
+  grid-template-rows: repeat(3, 62.5px);
+  position: absolute;
+  transition: all 3s;
+}
+.home__puzzle .puzzle-piece .puzzle-item {
+  border: #FFF solid 2px;
+  border-radius: 0.3rem;
+}
+.home__puzzle .puzzle-piece .item-a {
+  grid-area: a;
+}
+.home__puzzle .puzzle-piece .item-b {
+  grid-area: b;
+}
+.home__puzzle .puzzle-piece .item-c {
+  grid-area: c;
+}
+.home__puzzle .puzzle-piece .item-d {
+  grid-area: d;
+}
+.home__puzzle .puzzle-piece .item-e {
+  grid-area: e;
+}
+.home__puzzle .puzzle-piece .item-f {
+  grid-area: f;
+}
+.home__puzzle .piece-6, .home__puzzle .piece-8, .home__puzzle .piece-9, .home__puzzle .piece-13 {
+  grid-template-columns: repeat(4, 62.5px);
+  grid-template-rows: repeat(4, 62.5px);
+}
+.home__puzzle .piece-1 .puzzle-item, .home__puzzle .piece-3 .puzzle-item, .home__puzzle .piece-11 .puzzle-item {
+  border: var(--color-blue) solid 0.2rem;
+}
+.home__puzzle .piece-5 .puzzle-item, .home__puzzle .piece-7 .puzzle-item {
+  border: var(--color-yello) solid 0.2rem;
+}
+.home__puzzle .piece-6 .puzzle-item, .home__puzzle .piece-8 .puzzle-item, .home__puzzle .piece-9 .puzzle-item, .home__puzzle .piece-13 .puzzle-item {
+  background-color: var(--color-yello);
+}
+.home__puzzle .piece-2 .puzzle-item, .home__puzzle .piece-4 .puzzle-item, .home__puzzle .piece-10 .puzzle-item, .home__puzzle .piece-12 .puzzle-item {
+  background-color: var(--color-blue);
+}
+.home__puzzle .piece-1 {
+  grid-template-areas: "a b c" "d . ." "e . .";
+  top: 0rem;
+  left: 0rem;
+}
+.home__puzzle .piece-2 {
+  grid-template-areas: ". a ." ". b c" "d e .";
+  top: 6.2rem;
+  left: 0rem;
+}
+.home__puzzle .piece-3 {
+  grid-template-areas: ". . a" "b c d" "e . .";
+  top: 18.8rem;
+  left: 0rem;
+}
+.home__puzzle .piece-4 {
+  grid-template-areas: ". a b" "c d ." "e . .";
+  top: 31.3rem;
+  left: 0rem;
+}
+.home__puzzle .piece-5 {
+  grid-template-areas: ". a ." "b c d" ". e .";
+  top: 0rem;
+  left: 12.5rem;
+}
+.home__puzzle .piece-6 {
+  grid-template-areas: ". . a ." ". c b ." ". d . ." ". e . .";
+  top: 12.5rem;
+  left: 12.5rem;
+}
+.home__puzzle .piece-7 {
+  grid-template-areas: ". a ." ". b ." "c d e";
+  top: 25rem;
+  left: 18.7rem;
+}
+.home__puzzle .piece-8 {
+  grid-template-areas: ". . . ." ". . . ." ". a . ." "b c d e";
+  top: 25rem;
+  left: 6.2rem;
+}
+.home__puzzle .piece-9 {
+  grid-template-areas: "a b c d" ". . . e" ". . . ." ". . . .";
+  top: 0rem;
+  left: 25rem;
+}
+.home__puzzle .piece-10 {
+  grid-template-areas: "a b ." "c d e" ". . f";
+  top: 6.2rem;
+  left: 31.3rem;
+}
+.home__puzzle .piece-11 {
+  grid-template-areas: "a b ." "c d ." ". . .";
+  top: 18.8rem;
+  left: 31.2rem;
+}
+.home__puzzle .piece-12 {
+  grid-template-areas: "a b ." ". c ." "d e .";
+  top: 31.3rem;
+  left: 31.2rem;
+}
+.home__puzzle .piece-13 {
+  grid-template-areas: ". . . a" ". . . b" ". . . c" ". . . d";
+  top: 25rem;
+  left: 25rem;
+}
+.home__puzzle #puzzle-buttom {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  opacity: 0;
+  z-index: 2;
+  top: 45%;
+  left: 45%;
+}
+.home__puzzle #puzzle-buttom:checked {
+  transform: translateY(-450%);
+}
+.home__puzzle #puzzle-buttom:checked ~ .puzzle-icons {
+  transform: translateY(-450%);
+}
+.home__puzzle #puzzle-buttom:checked ~ .puzzle-icons > .icons--close {
+  display: block;
+}
+.home__puzzle #puzzle-buttom:checked ~ .puzzle-icons > .icons--open {
+  display: none;
+}
+.home__puzzle #puzzle-buttom:checked ~ .piece-1 {
+  top: -15%;
+  left: -20%;
+  transform: rotate(-45deg);
+}
+.home__puzzle #puzzle-buttom:checked ~ .piece-2 {
+  top: 20%;
+  left: -50%;
+  transform: rotate(45deg);
+}
+.home__puzzle #puzzle-buttom:checked ~ .piece-3 {
+  top: 40%;
+  left: -30%;
+  transform: rotate(-30deg);
+}
+.home__puzzle #puzzle-buttom:checked ~ .piece-4 {
+  top: 80%;
+  left: -30%;
+  transform: rotate(30deg);
+}
+.home__puzzle #puzzle-buttom:checked ~ .piece-5 {
+  top: -35%;
+  left: 10%;
+  transform: rotate(-30deg);
+}
+.home__puzzle #puzzle-buttom:checked ~ .piece-6 {
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+.home__puzzle #puzzle-buttom:checked ~ .piece-7 {
+  top: 90%;
+  left: 30%;
+  transform: rotate(-150deg);
+}
+.home__puzzle #puzzle-buttom:checked ~ .piece-8 {
+  top: 100%;
+  left: 15%;
+  transform: rotate(130deg);
+}
+.home__puzzle #puzzle-buttom:checked ~ .piece-9 {
+  top: -20%;
+  left: 60%;
+  transform: rotate(-20deg);
+}
+.home__puzzle #puzzle-buttom:checked ~ .piece-10 {
+  top: 10%;
+  left: 90%;
+  transform: rotate(45deg);
+}
+.home__puzzle #puzzle-buttom:checked ~ .piece-11 {
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+.home__puzzle #puzzle-buttom:checked ~ .piece-12 {
+  top: 90%;
+  left: 80%;
+  transform: rotate(-10deg);
+}
+.home__puzzle #puzzle-buttom:checked ~ .piece-13 {
+  top: 70%;
+  left: 70%;
+  transform: rotate(-20deg);
+}
+.home__puzzle #puzzle-buttom:hover ~ .puzzle-icons > .material-icons {
+  transform: scale(1.5, 1.5);
+  background-color: rgba(6, 159, 250, 0.3);
+  border: var(--color-blue) solid 0.1rem;
+}
+.home__puzzle .puzzle-icons {
+  position: absolute;
+  transition: all 2s;
+  z-index: 1;
+  top: 45%;
+  left: 45%;
+}
+.home__puzzle .puzzle-icons .material-icons {
+  font-size: 4.2rem;
+  color: #323232;
+  transition: all 1s;
+  border-radius: 0.5rem;
+}
+.home__puzzle .puzzle-icons .icons--close {
+  display: none;
+  color: #a1a1a1;
+}
+.home__puzzle .puzzle-icons .icons--open {
+  display: block;
+}
+
+.body__home {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body__home .home__text {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.body__home .home__text .text-greet {
+  text-align: center;
+}
+.body__home .home__text .text-greet b, .body__home .home__text .text-greet strong {
+  font-size: 3.2rem;
+  font-family: var(--family-Raleway);
+}
+.body__home .home__text .text-greet #andres {
+  font-size: 3.2rem;
+  color: var(--color-blue);
+  font-family: var(--family-Raleway);
+}
+.body__home .home__text .text-profession {
+  font-size: 2.2rem;
+  font-family: var(--family-Raleway);
+  text-align: center;
+  margin-top: -10rem;
+}
+.body__home .home__text .text-slogan {
+  font-size: 1.6rem;
+  font-family: var(--family-open);
+  text-align: center;
+  margin-top: -10rem;
+}
+
 /*
 *   @media Queries
 */
@@ -236,6 +500,198 @@ body {
       top: 100%;
     }
   }
+  #puzzle-buttom:checked ~ .home__text {
+    display: block;
+    opacity: 1;
+  }
+
+  .home__text {
+    width: 250px;
+    z-index: -1;
+    display: none;
+    opacity: 0;
+    transition: all 2s;
+    transition-delay: 1s;
+  }
+  .home__text .text-greet {
+    position: relative;
+    top: -4.5rem;
+  }
+  .home__text .text-profession {
+    position: relative;
+    top: 5rem;
+  }
+  .home__text .text-slogan {
+    position: relative;
+    top: 15rem;
+  }
+
+  .body__home .home__text .text-greet b,
+.body__home .home__text .text-greet strong,
+.body__home .home__text .text-greet strong #andres {
+    font-size: 2.2rem;
+  }
+
+  .body__home .home__text .text-profession {
+    font-size: 1.8rem;
+  }
+
+  .body__home .home__text .text-slogan {
+    font-size: 1.4rem;
+  }
+
+  .home__puzzle {
+    width: 20rem;
+    height: 20rem;
+  }
+  .home__puzzle .puzzle-piece {
+    grid-template-columns: repeat(3, 25px);
+    grid-template-rows: repeat(3, 25px);
+  }
+  .home__puzzle .piece-6, .home__puzzle .piece-8, .home__puzzle .piece-9, .home__puzzle .piece-13 {
+    grid-template-columns: repeat(4, 25px);
+    grid-template-rows: repeat(4, 25px);
+  }
+  .home__puzzle .piece-1 {
+    top: 0rem;
+    left: 0rem;
+  }
+  .home__puzzle .piece-2 {
+    top: 2.5rem;
+    left: 0rem;
+  }
+  .home__puzzle .piece-3 {
+    top: 7.5rem;
+    left: 0rem;
+  }
+  .home__puzzle .piece-4 {
+    top: 12.5rem;
+    left: 0rem;
+  }
+  .home__puzzle .piece-5 {
+    top: 0rem;
+    left: 5rem;
+  }
+  .home__puzzle .piece-6 {
+    top: 5rem;
+    left: 5rem;
+  }
+  .home__puzzle .piece-7 {
+    top: 10rem;
+    left: 7.5rem;
+  }
+  .home__puzzle .piece-8 {
+    top: 10rem;
+    left: 2.5rem;
+  }
+  .home__puzzle .piece-9 {
+    top: 0rem;
+    left: 10rem;
+  }
+  .home__puzzle .piece-10 {
+    top: 2.5rem;
+    left: 12.5rem;
+  }
+  .home__puzzle .piece-11 {
+    top: 7.5rem;
+    left: 12.5rem;
+  }
+  .home__puzzle .piece-12 {
+    top: 12.5rem;
+    left: 12.5rem;
+  }
+  .home__puzzle .piece-13 {
+    top: 10rem;
+    left: 10rem;
+  }
+  .home__puzzle #puzzle-buttom:checked ~ .piece-1 {
+    top: -25%;
+    left: -20%;
+    transform: rotate(-45deg);
+  }
+  .home__puzzle #puzzle-buttom:checked ~ .piece-2 {
+    top: 20%;
+    left: -50%;
+    transform: rotate(45deg);
+  }
+  .home__puzzle #puzzle-buttom:checked ~ .piece-3 {
+    top: 40%;
+    left: -35%;
+    transform: rotate(-30deg);
+  }
+  .home__puzzle #puzzle-buttom:checked ~ .piece-4 {
+    top: 90%;
+    left: -30%;
+    transform: rotate(30deg);
+  }
+  .home__puzzle #puzzle-buttom:checked ~ .piece-5 {
+    top: -60%;
+    left: 10%;
+    transform: rotate(-30deg);
+  }
+  .home__puzzle #puzzle-buttom:checked ~ .piece-6 {
+    opacity: 0;
+    transform: rotate(-90deg);
+  }
+  .home__puzzle #puzzle-buttom:checked ~ .piece-7 {
+    top: 100%;
+    left: 30%;
+    transform: rotate(-150deg);
+  }
+  .home__puzzle #puzzle-buttom:checked ~ .piece-8 {
+    top: 110%;
+    left: 0%;
+    transform: rotate(130deg);
+  }
+  .home__puzzle #puzzle-buttom:checked ~ .piece-9 {
+    top: -50%;
+    left: 60%;
+    transform: rotate(-20deg);
+  }
+  .home__puzzle #puzzle-buttom:checked ~ .piece-10 {
+    top: 10%;
+    left: 100%;
+    transform: rotate(45deg);
+  }
+  .home__puzzle #puzzle-buttom:checked ~ .piece-11 {
+    opacity: 0;
+    transform: rotate(-90deg);
+  }
+  .home__puzzle #puzzle-buttom:checked ~ .piece-12 {
+    top: 100%;
+    left: 80%;
+    transform: rotate(-10deg);
+  }
+  .home__puzzle #puzzle-buttom:checked ~ .piece-13 {
+    top: 70%;
+    left: 70%;
+    transform: rotate(-20deg);
+  }
+  .home__puzzle #puzzle-buttom:hover ~ .puzzle-icons > .material-icons {
+    transform: scale(1.5, 1.5);
+    background-color: rgba(6, 159, 250, 0.3);
+    border: var(--color-blue) solid 0.1rem;
+  }
+  .home__puzzle .puzzle-icons {
+    position: absolute;
+    transition: all 2s;
+    z-index: 1;
+    top: 45%;
+    left: 45%;
+  }
+  .home__puzzle .puzzle-icons .material-icons {
+    font-size: 4.2rem;
+    color: #323232;
+    transition: all 1s;
+    border-radius: 0.5rem;
+  }
+  .home__puzzle .puzzle-icons .icons--close {
+    display: none;
+    color: #a1a1a1;
+  }
+  .home__puzzle .puzzle-icons .icons--open {
+    display: block;
+  }
 }
 @media only screen and (min-width: 425px) and (max-width: 768px) {
   .header {
@@ -262,24 +718,139 @@ body {
     text-align: right;
   }
 
-  .network {
-    width: 3rem;
+  .home__text {
+    width: 300px;
+    z-index: -1;
+  }
+  .home__text .text-greet {
+    position: relative;
+    top: -6rem;
+  }
+  .home__text .text-greet b, .home__text .text-greet strong {
+    font-size: 2.6rem;
+  }
+  .home__text .text-greet #andres {
+    font-size: 2.6rem;
+  }
+  .home__text .text-profession {
+    font-size: 2rem;
+    position: relative;
+    top: -2rem;
+  }
+  .home__text .text-slogan {
+    font-size: 1.6rem;
+    position: relative;
+    top: 2rem;
   }
 
-  @keyframes cambio {
-    0% {
-      top: -300%;
-    }
-    100% {
-      top: 100%;
-    }
+  .home__puzzle {
+    width: 30rem;
+    height: 30rem;
+    top: 5rem;
+  }
+  .home__puzzle .puzzle-piece {
+    grid-template-columns: repeat(3, 37.5px);
+    grid-template-rows: repeat(3, 37.5px);
+  }
+  .home__puzzle .piece-6, .home__puzzle .piece-8, .home__puzzle .piece-9, .home__puzzle .piece-13 {
+    grid-template-columns: repeat(4, 37.5px);
+    grid-template-rows: repeat(4, 37.5px);
+  }
+  .home__puzzle .piece-1 {
+    top: 0rem;
+    left: 0rem;
+  }
+  .home__puzzle .piece-2 {
+    top: 3.7rem;
+    left: 0rem;
+  }
+  .home__puzzle .piece-3 {
+    top: 11.2rem;
+    left: 0rem;
+  }
+  .home__puzzle .piece-4 {
+    top: 18.7rem;
+    left: 0rem;
+  }
+  .home__puzzle .piece-5 {
+    top: 0rem;
+    left: 7.5rem;
+  }
+  .home__puzzle .piece-6 {
+    top: 7.5rem;
+    left: 7.5rem;
+  }
+  .home__puzzle .piece-7 {
+    top: 15rem;
+    left: 11.2rem;
+  }
+  .home__puzzle .piece-8 {
+    top: 14.9rem;
+    left: 3.7rem;
+  }
+  .home__puzzle .piece-9 {
+    top: 0rem;
+    left: 15rem;
+  }
+  .home__puzzle .piece-10 {
+    top: 3.7rem;
+    left: 18.7rem;
+  }
+  .home__puzzle .piece-11 {
+    top: 11.2rem;
+    left: 18.7rem;
+  }
+  .home__puzzle .piece-12 {
+    top: 18.7rem;
+    left: 18.7rem;
+  }
+  .home__puzzle .piece-13 {
+    top: 14.9rem;
+    left: 14.9rem;
+  }
+  .home__puzzle #puzzle-buttom:checked ~ .piece-3 {
+    top: 40%;
+    left: -36%;
+    transform: rotate(-30deg);
+  }
+  .home__puzzle #puzzle-buttom:checked ~ .piece-5 {
+    top: -45%;
+  }
+  .home__puzzle #puzzle-buttom:checked ~ .piece-8 {
+    top: 100%;
+    left: 3%;
+    transform: rotate(130deg);
+  }
+  .home__puzzle #puzzle-buttom:checked ~ .piece-9 {
+    top: -35%;
+    left: 50%;
+    transform: rotate(20deg);
+  }
+  .home__puzzle #puzzle-buttom:checked ~ .piece-10 {
+    top: 10%;
+    left: 90%;
+    transform: rotate(45deg);
+  }
+  .home__puzzle #puzzle-buttom:checked ~ .piece-11 {
+    opacity: 0;
+    transform: rotate(-90deg);
+  }
+  .home__puzzle #puzzle-buttom:checked ~ .piece-12 {
+    top: 90%;
+    left: 80%;
+    transform: rotate(-10deg);
+  }
+  .home__puzzle #puzzle-buttom:checked ~ .piece-13 {
+    top: 70%;
+    left: 70%;
+    transform: rotate(-20deg);
   }
 }
 @media only screen and (min-width: 1440px) {
   body {
-    grid-template-columns: 5rem 1360px 5rem;
+    grid-template-columns: 5rem 1024px 5rem;
     grid-template-rows: 5rem auto 5rem;
-    padding: 0% 21.5%;
+    padding: 0rem 10% !important;
   }
 }
 /*
@@ -287,6 +858,8 @@ body {
 */
 :root {
   --color-blue: #069FFA;
+  --color-yello: #FAF51E;
+  --color-black: #323232;
   --family-open: "Open Sans", sans-serif;
   --family-Raleway: "Raleway", sans-serif;
   --family-kalam: "Kalam", cursive;
