@@ -351,8 +351,10 @@
     #puzzle-buttom:hover ~ .puzzle-icons>.material-icons
     {
         transform: scale(1.5, 1.5);
-        background-color: rgba(6, 159, 250, 0.3);
+        background-color: var(--color-blue);
         border: var(--color-blue) solid 0.1rem;
+        padding: 0rem 0.6rem;
+        box-shadow: 2px 2px 5px var(--color-blue) ;
     }
 
     .puzzle-icons

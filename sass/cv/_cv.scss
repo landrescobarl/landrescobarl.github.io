@@ -1,0 +1,32 @@
+.cv
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 5rem;
+
+    .cv__conteiner
+    {
+        .cv-link
+        {
+            font-size: 1.6rem;
+            display: block;
+            transform: rotate(-90deg);
+            font-family: var(--family-Raleway);
+            transition: 1s;
+        }
+
+        .cv-link:hover, .material-icons:hover
+        {
+            font-size: 2.2rem;
+            color: var(--color-blue);
+            font-weight: bolder;
+        }
+    }
+
+    .cv__conteiner:hover
+    {
+        color: var(--color-blue);
+    }
+}
