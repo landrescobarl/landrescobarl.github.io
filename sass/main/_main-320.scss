@@ -1,35 +1,32 @@
 
 #puzzle-buttom:checked ~ .home__text
 {
-    display: block;
-    opacity: 1;
+     visibility: inherit;
 }
 
 .home__text
     
 {
+    display: block;
     width: 250px;
     z-index: -1;
-    display: none;
-    opacity: 0;
-    transition: all 2s;
-    transition-delay: 1s;
+    visibility: hidden;
 
     .text-greet
     {
         position: relative;
-        top: -4.5rem;
+        top: -7rem;
     }
 
     .text-profession
     {
         position: relative;
-        top: 5rem;
+        top: 1rem;
     }
     .text-slogan
     {
         position: relative;
-        top: 15rem;
+        top: 9rem;
     }
 }
 

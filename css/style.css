@@ -458,7 +458,7 @@ body {
 /*
 *   @media Queries
 */
-@media only screen and (min-width: 320px) and (max-width: 425px) {
+@media only screen and (min-width: 319px) and (max-width: 425px) {
   body {
     grid-template-columns: 3rem auto 3rem;
     grid-template-rows: 5rem auto 5rem;
@@ -501,29 +501,26 @@ body {
     }
   }
   #puzzle-buttom:checked ~ .home__text {
-    display: block;
-    opacity: 1;
+    visibility: inherit;
   }
 
   .home__text {
+    display: block;
     width: 250px;
     z-index: -1;
-    display: none;
-    opacity: 0;
-    transition: all 2s;
-    transition-delay: 1s;
+    visibility: hidden;
   }
   .home__text .text-greet {
     position: relative;
-    top: -4.5rem;
+    top: -7rem;
   }
   .home__text .text-profession {
     position: relative;
-    top: 5rem;
+    top: 1rem;
   }
   .home__text .text-slogan {
     position: relative;
-    top: 15rem;
+    top: 9rem;
   }
 
   .body__home .home__text .text-greet b,
@@ -622,7 +619,7 @@ body {
   .home__puzzle #puzzle-buttom:checked ~ .piece-4 {
     top: 90%;
     left: -30%;
-    transform: rotate(30deg);
+    transform: rotate(-30deg);
   }
   .home__puzzle #puzzle-buttom:checked ~ .piece-5 {
     top: -60%;
@@ -634,18 +631,18 @@ body {
     transform: rotate(-90deg);
   }
   .home__puzzle #puzzle-buttom:checked ~ .piece-7 {
-    top: 100%;
+    top: 135%;
     left: 30%;
     transform: rotate(-150deg);
   }
   .home__puzzle #puzzle-buttom:checked ~ .piece-8 {
-    top: 110%;
+    top: 135%;
     left: 0%;
     transform: rotate(130deg);
   }
   .home__puzzle #puzzle-buttom:checked ~ .piece-9 {
     top: -50%;
-    left: 60%;
+    left: 75%;
     transform: rotate(-20deg);
   }
   .home__puzzle #puzzle-buttom:checked ~ .piece-10 {
@@ -658,7 +655,7 @@ body {
     transform: rotate(-90deg);
   }
   .home__puzzle #puzzle-buttom:checked ~ .piece-12 {
-    top: 100%;
+    top: 130%;
     left: 80%;
     transform: rotate(-10deg);
   }
@@ -666,31 +663,6 @@ body {
     top: 70%;
     left: 70%;
     transform: rotate(-20deg);
-  }
-  .home__puzzle #puzzle-buttom:hover ~ .puzzle-icons > .material-icons {
-    transform: scale(1.5, 1.5);
-    background-color: rgba(6, 159, 250, 0.3);
-    border: var(--color-blue) solid 0.1rem;
-  }
-  .home__puzzle .puzzle-icons {
-    position: absolute;
-    transition: all 2s;
-    z-index: 1;
-    top: 45%;
-    left: 45%;
-  }
-  .home__puzzle .puzzle-icons .material-icons {
-    font-size: 4.2rem;
-    color: #323232;
-    transition: all 1s;
-    border-radius: 0.5rem;
-  }
-  .home__puzzle .puzzle-icons .icons--close {
-    display: none;
-    color: #a1a1a1;
-  }
-  .home__puzzle .puzzle-icons .icons--open {
-    display: block;
   }
 }
 @media only screen and (min-width: 425px) and (max-width: 768px) {

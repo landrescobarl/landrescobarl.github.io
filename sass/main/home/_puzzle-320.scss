@@ -119,7 +119,7 @@
     {
         top: 90%;
         left: -30%;
-        transform: rotate(30deg);
+        transform: rotate(-30deg);
     }
 
     #puzzle-buttom:checked ~ .piece-5
@@ -137,14 +137,14 @@
 
     #puzzle-buttom:checked ~ .piece-7
     {
-        top: 100%;
+        top: 135%;
         left: 30%;
         transform: rotate(-150deg);
     }
 
     #puzzle-buttom:checked ~ .piece-8
     {
-        top: 110%;
+        top: 135%;
         left: 0%;
         transform: rotate(130deg);
     }
@@ -152,7 +152,7 @@
     #puzzle-buttom:checked ~ .piece-9
     {
         top: -50%;
-        left: 60%;
+        left: 75%;
         transform: rotate(-20deg);
     }
 
@@ -171,7 +171,7 @@
 
     #puzzle-buttom:checked ~ .piece-12
     {
-        top: 100%;
+        top: 130%;
         left: 80%;
         transform: rotate(-10deg);
     }
@@ -181,43 +181,6 @@
         top: 70%;
         left: 70%;
         transform: rotate(-20deg);
-    }
-
-    #puzzle-buttom:hover ~ .puzzle-icons>.material-icons
-    {
-        transform: scale(1.5, 1.5);
-        background-color: rgba(6, 159, 250, 0.3);
-        border: var(--color-blue) solid 0.1rem;
-    }
-
-    .puzzle-icons
-    {
-        position: absolute;
-        transition: all 2s;
-        z-index: 1;
-        top: 45%;
-        left: 45%;
-        
-
-        .material-icons
-        {
-            font-size: 4.2rem;
-            color: #323232;
-            transition: all 1s;
-            border-radius: 0.5rem;
-        }
-
-        .icons--close
-        {
-            display: none;
-            color: rgb(161, 161, 161);
-        }
-
-        .icons--open
-        {
-            display: block;
-        }
-
     }
 
 }
