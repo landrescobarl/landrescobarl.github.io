@@ -1,0 +1,131 @@
+.aboutme-puzzle {
+  width: 80rem;
+  height: 80rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 1rem;
+}
+.aboutme-puzzle .puzzle-button {
+  padding: 0.5rem 0.5rem;
+  position: absolute;
+  z-index: 1;
+  background-color: cornflowerblue;
+  border-radius: 50%;
+  box-shadow: 0px 15px 0px 1px darkblue;
+  transition: 1s;
+}
+.aboutme-puzzle .puzzle-button .material-icons {
+  font-size: 5rem;
+  display: block;
+}
+.aboutme-puzzle #button {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+}
+.aboutme-puzzle #button:checked ~ .puzzle-button {
+  transform: translateY(25%);
+  box-shadow: 0px 1px 0px 0px darkblue;
+  color: #fff;
+}
+.aboutme-puzzle #button:checked ~ .puzzle-circle {
+  transform: rotate(0deg);
+}
+.aboutme-puzzle .puzzle-circle {
+  border: solid 1px springgreen;
+  border-radius: 50%;
+  position: absolute;
+  overflow: hidden;
+  transition: 3s;
+}
+.aboutme-puzzle .puzzle-circle .puzzle-imgback {
+  width: 80rem;
+  height: 80rem;
+  position: relative;
+  background-image: url("/landrescobarl.github.io/laboratory-object/pexels-ken-tomita-389818 (2).jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+.aboutme-puzzle .puzzle-circle .puzzle-contents {
+  border: solid red 1px;
+  width: 75rem;
+  height: 75rem;
+  position: absolute;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+.aboutme-puzzle .puzzle-circle .puzzle-contents .puzzle-title {
+  font-size: 2.2rem;
+  margin-top: 2rem;
+}
+.aboutme-puzzle .puzzle-circle .puzzle-contents .puzzle-name {
+  font-size: 3.2rem;
+  margin-top: -5rem;
+}
+.aboutme-puzzle .puzzle-circle .puzzle-contents .puzzle-text {
+  display: block;
+  width: 70rem;
+  margin-bottom: 25rem;
+  font-size: 1.8rem;
+}
+.aboutme-puzzle .circle-1 {
+  width: 80rem;
+  height: 80rem;
+  transform: rotate(145deg);
+}
+.aboutme-puzzle .circle-1 .puzzle-contents {
+  top: 2.5rem;
+  left: 2.5rem;
+}
+.aboutme-puzzle .puzzle-back {
+  width: 60rem;
+  height: 60rem;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.aboutme-puzzle .circle-2 {
+  width: 60rem;
+  height: 60rem;
+  transform: rotate(-150deg);
+}
+.aboutme-puzzle .circle-2 .puzzle-imgback {
+  top: -10rem;
+  left: -10rem;
+}
+.aboutme-puzzle .circle-2 .puzzle-contents {
+  top: -7.5rem;
+  left: -7.5rem;
+}
+.aboutme-puzzle .puzzle-back2 {
+  width: 40rem;
+  height: 40rem;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.aboutme-puzzle .circle-3 {
+  width: 40rem;
+  height: 40rem;
+  transform: rotate(145deg);
+}
+.aboutme-puzzle .circle-3 .puzzle-imgback {
+  top: -20rem;
+  left: -20rem;
+}
+.aboutme-puzzle .circle-3 .puzzle-contents {
+  top: -17.5rem;
+  left: -17.5rem;
+}
+
+/*# sourceMappingURL=puzzle2.css.map */
