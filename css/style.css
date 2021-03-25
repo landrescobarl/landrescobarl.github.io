@@ -191,6 +191,47 @@ body {
   margin: 0.5rem;
 }
 
+.body__home {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  display: none;
+}
+.body__home .home__text {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.body__home .home__text .text-greet {
+  text-align: center;
+}
+.body__home .home__text .text-greet b, .body__home .home__text .text-greet strong {
+  font-size: 3.2rem;
+  font-family: var(--family-Raleway);
+}
+.body__home .home__text .text-greet #andres {
+  font-size: 3.2rem;
+  color: var(--color-blue);
+  font-family: var(--family-Raleway);
+}
+.body__home .home__text .text-profession {
+  font-size: 2.2rem;
+  font-family: var(--family-Raleway);
+  text-align: center;
+  margin-top: -10rem;
+}
+.body__home .home__text .text-slogan {
+  font-size: 1.6rem;
+  font-family: var(--family-open);
+  text-align: center;
+  margin-top: -10rem;
+}
+
 .home__puzzle {
   width: 50rem;
   height: 50rem;
@@ -234,10 +275,10 @@ body {
   border: var(--color-blue) solid 0.2rem;
 }
 .home__puzzle .piece-5 .puzzle-item, .home__puzzle .piece-7 .puzzle-item {
-  border: var(--color-yello) solid 0.2rem;
+  border: var(--color-morado) solid 0.2rem;
 }
 .home__puzzle .piece-6 .puzzle-item, .home__puzzle .piece-8 .puzzle-item, .home__puzzle .piece-9 .puzzle-item, .home__puzzle .piece-13 .puzzle-item {
-  background-color: var(--color-yello);
+  background-color: var(--color-morado);
 }
 .home__puzzle .piece-2 .puzzle-item, .home__puzzle .piece-4 .puzzle-item, .home__puzzle .piece-10 .puzzle-item, .home__puzzle .piece-12 .puzzle-item {
   background-color: var(--color-blue);
@@ -364,7 +405,7 @@ body {
 }
 .home__puzzle #puzzle-buttom:checked ~ .piece-8 {
   top: 100%;
-  left: 15%;
+  left: 5%;
   transform: rotate(130deg);
 }
 .home__puzzle #puzzle-buttom:checked ~ .piece-9 {
@@ -419,42 +460,190 @@ body {
   display: block;
 }
 
-.body__home {
+@keyframes cambio {
+  0% {
+    font-size: 4rem;
+  }
+  100% {
+    font-size: 4.8rem;
+  }
+}
+.body__aboutme {
+  width: 100%;
   height: 100%;
-  overflow: hidden;
+  display: block;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.body__home .home__text {
-  width: 500px;
+.body__aboutme .aboutme-puzzle {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body__aboutme .aboutme-puzzle .puzzle-action {
+  position: absolute;
+  bottom: 5%;
+  right: -30%;
+  transform: rotate(-30deg);
+  animation: cambio 0.6s infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  font-size: 4rem;
+}
+.body__aboutme .aboutme-puzzle .puzzle-button {
+  padding: 0.5rem 0.5rem;
+  position: absolute;
+  z-index: 1;
+  background-color: var(--color-blue);
+  border-radius: 50%;
+  border: var(--color-blue2) solid 0.5px;
+  box-shadow: 0.5px 10px 0.5px 0px var(--color-blue2);
+  transition: 1s;
+  bottom: 15%;
+  right: -25%;
+}
+.body__aboutme .aboutme-puzzle .puzzle-button .material-icons {
+  font-size: 5rem;
+  display: block;
+}
+.body__aboutme .aboutme-puzzle #button {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+}
+.body__aboutme .aboutme-puzzle #button:checked ~ .puzzle-button {
+  transform: translateY(25%);
+  box-shadow: 0px 1px 0px 0px var(--color-blue2);
+  color: #fff;
+}
+.body__aboutme .aboutme-puzzle #button:checked ~ .puzzle-circle {
+  transform: rotate(0deg);
+}
+.body__aboutme .aboutme-puzzle .puzzle-circle {
+  border-radius: 50%;
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  transition: 3s;
+  border: rgba(0, 0, 0, 0.001) solid 0.01px;
+}
+.body__aboutme .aboutme-puzzle .puzzle-circle .puzzle-imgback {
+  width: 80rem;
+  height: 80rem;
+  position: absolute;
+  background-image: url("/landrescobarl.github.io/img/aboutme-img2.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+.body__aboutme .aboutme-puzzle .puzzle-circle .puzzle-contents {
+  width: 72rem;
+  height: 100%;
+  position: absolute;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
 }
-.body__home .home__text .text-greet {
-  text-align: center;
-}
-.body__home .home__text .text-greet b, .body__home .home__text .text-greet strong {
-  font-size: 3.2rem;
-  font-family: var(--family-Raleway);
-}
-.body__home .home__text .text-greet #andres {
-  font-size: 3.2rem;
-  color: var(--color-blue);
-  font-family: var(--family-Raleway);
-}
-.body__home .home__text .text-profession {
+.body__aboutme .aboutme-puzzle .puzzle-circle .puzzle-contents .puzzle-title {
   font-size: 2.2rem;
   font-family: var(--family-Raleway);
-  text-align: center;
-  margin-top: -10rem;
+  display: block;
+  position: relative;
+  top: -15%;
 }
-.body__home .home__text .text-slogan {
+.body__aboutme .aboutme-puzzle .puzzle-circle .puzzle-contents .puzzle-name {
+  font-size: 3.2rem;
+  font-family: var(--family-Raleway);
+  display: block;
+  position: relative;
+  top: -10%;
+}
+.body__aboutme .aboutme-puzzle .puzzle-circle .puzzle-contents .puzzle-text {
   font-size: 1.6rem;
   font-family: var(--family-open);
-  text-align: center;
-  margin-top: -10rem;
+  display: block;
+  position: relative;
+}
+.body__aboutme .aboutme-puzzle .puzzle-circle .puzzle-contents .text-2 {
+  margin-top: 2rem;
+}
+.body__aboutme .aboutme-puzzle .puzzle-circle .puzzle-contents a {
+  font-size: 1.8rem;
+  font-family: var(--family-Raleway);
+  padding: 1rem 1rem;
+  color: #fff;
+  display: block;
+  width: 20rem;
+  position: relative;
+  border-radius: 5px;
+}
+.body__aboutme .aboutme-puzzle .puzzle-circle .puzzle-contents .puzzle-dev {
+  background-color: var(--color-blue);
+  left: 15rem;
+}
+.body__aboutme .aboutme-puzzle .puzzle-circle .puzzle-contents .puzzle-tec {
+  background-color: var(--color-morado);
+  left: -15rem;
+  top: 4rem;
+}
+.body__aboutme .aboutme-puzzle .circle-1 {
+  width: 80rem;
+  height: 80rem;
+  transform: rotate(145deg);
+}
+.body__aboutme .aboutme-puzzle .puzzle-back {
+  width: 60rem;
+  height: 60rem;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.body__aboutme .aboutme-puzzle .circle-2 {
+  width: 60rem;
+  height: 60rem;
+  transform: rotate(-150deg);
+}
+.body__aboutme .aboutme-puzzle .circle-2 .puzzle-imgback {
+  top: -10rem;
+  left: -10rem;
+}
+.body__aboutme .aboutme-puzzle .puzzle-back2 {
+  width: 40rem;
+  height: 40rem;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.body__aboutme .aboutme-puzzle .circle-3 {
+  width: 40rem;
+  height: 40rem;
+  transform: rotate(145deg);
+}
+.body__aboutme .aboutme-puzzle .circle-3 .puzzle-imgback {
+  top: -20rem;
+  left: -20rem;
+}
+.body__aboutme .aboutme-puzzle .circle-3 .puzzle-contents .puzzle-title {
+  top: -15rem;
+}
+.body__aboutme .aboutme-puzzle .circle-3 .puzzle-contents .puzzle-name {
+  top: -6rem;
+}
+
+.body {
+  position: relative;
+  overflow: hidden;
 }
 
 .cv {
@@ -489,13 +678,14 @@ body {
 .foot .foot__firma {
   width: 11.1rem;
   height: 4rem;
-  background-image: url("/img/firma.png");
+  background-image: url("/landrescobarl.github.io/img/firma.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 .foot .foot__copy {
   font-size: 2rem;
   font-family: var(--family-Raleway);
+  margin-left: 20rem;
 }
 .foot .foot__redes {
   width: 30rem;
@@ -526,11 +716,6 @@ body {
 *   @media Queries
 */
 @media only screen and (min-width: 319px) and (max-width: 425px) {
-  body {
-    grid-template-columns: 3rem auto 3rem;
-    grid-template-rows: 5rem auto 5rem;
-  }
-
   .header {
     padding: 0rem 2rem;
   }
@@ -553,183 +738,6 @@ body {
     height: 3rem;
     display: block;
     text-align: right;
-  }
-
-  .network {
-    width: 3rem;
-  }
-
-  @keyframes cambio {
-    0% {
-      top: -300%;
-    }
-    100% {
-      top: 100%;
-    }
-  }
-  #puzzle-buttom:checked ~ .home__text {
-    visibility: inherit;
-  }
-
-  .home__text {
-    display: block;
-    width: 250px;
-    z-index: -1;
-    visibility: hidden;
-  }
-  .home__text .text-greet {
-    position: relative;
-    top: -7rem;
-  }
-  .home__text .text-profession {
-    position: relative;
-    top: 1rem;
-  }
-  .home__text .text-slogan {
-    position: relative;
-    top: 9rem;
-  }
-
-  .body__home .home__text .text-greet b,
-.body__home .home__text .text-greet strong,
-.body__home .home__text .text-greet strong #andres {
-    font-size: 2.2rem;
-  }
-
-  .body__home .home__text .text-profession {
-    font-size: 1.8rem;
-  }
-
-  .body__home .home__text .text-slogan {
-    font-size: 1.4rem;
-  }
-
-  .home__puzzle {
-    width: 20rem;
-    height: 20rem;
-  }
-  .home__puzzle .puzzle-piece {
-    grid-template-columns: repeat(3, 25px);
-    grid-template-rows: repeat(3, 25px);
-  }
-  .home__puzzle .piece-6, .home__puzzle .piece-8, .home__puzzle .piece-9, .home__puzzle .piece-13 {
-    grid-template-columns: repeat(4, 25px);
-    grid-template-rows: repeat(4, 25px);
-  }
-  .home__puzzle .piece-1 {
-    top: 0rem;
-    left: 0rem;
-  }
-  .home__puzzle .piece-2 {
-    top: 2.5rem;
-    left: 0rem;
-  }
-  .home__puzzle .piece-3 {
-    top: 7.5rem;
-    left: 0rem;
-  }
-  .home__puzzle .piece-4 {
-    top: 12.5rem;
-    left: 0rem;
-  }
-  .home__puzzle .piece-5 {
-    top: 0rem;
-    left: 5rem;
-  }
-  .home__puzzle .piece-6 {
-    top: 5rem;
-    left: 5rem;
-  }
-  .home__puzzle .piece-7 {
-    top: 10rem;
-    left: 7.5rem;
-  }
-  .home__puzzle .piece-8 {
-    top: 10rem;
-    left: 2.5rem;
-  }
-  .home__puzzle .piece-9 {
-    top: 0rem;
-    left: 10rem;
-  }
-  .home__puzzle .piece-10 {
-    top: 2.5rem;
-    left: 12.5rem;
-  }
-  .home__puzzle .piece-11 {
-    top: 7.5rem;
-    left: 12.5rem;
-  }
-  .home__puzzle .piece-12 {
-    top: 12.5rem;
-    left: 12.5rem;
-  }
-  .home__puzzle .piece-13 {
-    top: 10rem;
-    left: 10rem;
-  }
-  .home__puzzle #puzzle-buttom:checked ~ .piece-1 {
-    top: -25%;
-    left: -20%;
-    transform: rotate(-45deg);
-  }
-  .home__puzzle #puzzle-buttom:checked ~ .piece-2 {
-    top: 20%;
-    left: -50%;
-    transform: rotate(45deg);
-  }
-  .home__puzzle #puzzle-buttom:checked ~ .piece-3 {
-    top: 40%;
-    left: -35%;
-    transform: rotate(-30deg);
-  }
-  .home__puzzle #puzzle-buttom:checked ~ .piece-4 {
-    top: 90%;
-    left: -30%;
-    transform: rotate(-30deg);
-  }
-  .home__puzzle #puzzle-buttom:checked ~ .piece-5 {
-    top: -60%;
-    left: 10%;
-    transform: rotate(-30deg);
-  }
-  .home__puzzle #puzzle-buttom:checked ~ .piece-6 {
-    opacity: 0;
-    transform: rotate(-90deg);
-  }
-  .home__puzzle #puzzle-buttom:checked ~ .piece-7 {
-    top: 135%;
-    left: 30%;
-    transform: rotate(-150deg);
-  }
-  .home__puzzle #puzzle-buttom:checked ~ .piece-8 {
-    top: 135%;
-    left: 0%;
-    transform: rotate(130deg);
-  }
-  .home__puzzle #puzzle-buttom:checked ~ .piece-9 {
-    top: -50%;
-    left: 75%;
-    transform: rotate(-20deg);
-  }
-  .home__puzzle #puzzle-buttom:checked ~ .piece-10 {
-    top: 10%;
-    left: 100%;
-    transform: rotate(45deg);
-  }
-  .home__puzzle #puzzle-buttom:checked ~ .piece-11 {
-    opacity: 0;
-    transform: rotate(-90deg);
-  }
-  .home__puzzle #puzzle-buttom:checked ~ .piece-12 {
-    top: 130%;
-    left: 80%;
-    transform: rotate(-10deg);
-  }
-  .home__puzzle #puzzle-buttom:checked ~ .piece-13 {
-    top: 70%;
-    left: 70%;
-    transform: rotate(-20deg);
   }
 }
 @media only screen and (min-width: 425px) and (max-width: 768px) {
@@ -756,150 +764,16 @@ body {
     display: block;
     text-align: right;
   }
-
-  .home__text {
-    display: block;
-    width: 300px;
-    z-index: -1;
-  }
-  .home__text .text-greet {
-    position: relative;
-    top: -6rem;
-  }
-  .home__text .text-greet b, .home__text .text-greet strong {
-    font-size: 2.6rem;
-  }
-  .home__text .text-greet #andres {
-    font-size: 2.6rem;
-  }
-  .home__text .text-profession {
-    font-size: 2rem;
-    position: relative;
-    top: -2rem;
-  }
-  .home__text .text-slogan {
-    font-size: 1.6rem;
-    position: relative;
-    top: 2rem;
-  }
-
-  .home__puzzle {
-    width: 30rem;
-    height: 30rem;
-    top: 5rem;
-  }
-  .home__puzzle .puzzle-piece {
-    grid-template-columns: repeat(3, 37.5px);
-    grid-template-rows: repeat(3, 37.5px);
-  }
-  .home__puzzle .piece-6, .home__puzzle .piece-8, .home__puzzle .piece-9, .home__puzzle .piece-13 {
-    grid-template-columns: repeat(4, 37.5px);
-    grid-template-rows: repeat(4, 37.5px);
-  }
-  .home__puzzle .piece-1 {
-    top: 0rem;
-    left: 0rem;
-  }
-  .home__puzzle .piece-2 {
-    top: 3.7rem;
-    left: 0rem;
-  }
-  .home__puzzle .piece-3 {
-    top: 11.2rem;
-    left: 0rem;
-  }
-  .home__puzzle .piece-4 {
-    top: 18.7rem;
-    left: 0rem;
-  }
-  .home__puzzle .piece-5 {
-    top: 0rem;
-    left: 7.5rem;
-  }
-  .home__puzzle .piece-6 {
-    top: 7.5rem;
-    left: 7.5rem;
-  }
-  .home__puzzle .piece-7 {
-    top: 15rem;
-    left: 11.2rem;
-  }
-  .home__puzzle .piece-8 {
-    top: 14.9rem;
-    left: 3.7rem;
-  }
-  .home__puzzle .piece-9 {
-    top: 0rem;
-    left: 15rem;
-  }
-  .home__puzzle .piece-10 {
-    top: 3.7rem;
-    left: 18.7rem;
-  }
-  .home__puzzle .piece-11 {
-    top: 11.2rem;
-    left: 18.7rem;
-  }
-  .home__puzzle .piece-12 {
-    top: 18.7rem;
-    left: 18.7rem;
-  }
-  .home__puzzle .piece-13 {
-    top: 14.9rem;
-    left: 14.9rem;
-  }
-  .home__puzzle #puzzle-buttom:checked ~ .piece-3 {
-    top: 40%;
-    left: -36%;
-    transform: rotate(-30deg);
-  }
-  .home__puzzle #puzzle-buttom:checked ~ .piece-5 {
-    top: -45%;
-  }
-  .home__puzzle #puzzle-buttom:checked ~ .piece-8 {
-    top: 100%;
-    left: 3%;
-    transform: rotate(130deg);
-  }
-  .home__puzzle #puzzle-buttom:checked ~ .piece-9 {
-    top: -35%;
-    left: 50%;
-    transform: rotate(20deg);
-  }
-  .home__puzzle #puzzle-buttom:checked ~ .piece-10 {
-    top: 10%;
-    left: 90%;
-    transform: rotate(45deg);
-  }
-  .home__puzzle #puzzle-buttom:checked ~ .piece-11 {
-    opacity: 0;
-    transform: rotate(-90deg);
-  }
-  .home__puzzle #puzzle-buttom:checked ~ .piece-12 {
-    top: 90%;
-    left: 80%;
-    transform: rotate(-10deg);
-  }
-  .home__puzzle #puzzle-buttom:checked ~ .piece-13 {
-    top: 70%;
-    left: 70%;
-    transform: rotate(-20deg);
-  }
-}
-@media only screen and (min-width: 1440px) {
-  body {
-    grid-template-columns: 5rem 1024px 5rem;
-    grid-template-rows: 5rem auto 5rem;
-    padding: 0rem 10% !important;
-  }
 }
 /*
 *   @import fonts title--'Raleway', sans-serif; text-->'Open Sans', sans-serif; 
 */
 :root {
   --color-blue: #069FFA;
+  --color-blue2: #1575AD;
   --color-yello: #FAF51E;
   --color-black: #323232;
+  --color-morado: #AB0AAD;
   --family-open: "Open Sans", sans-serif;
   --family-Raleway: "Raleway", sans-serif;
   --family-kalam: "Kalam", cursive;
