@@ -1,0 +1,178 @@
+
+.aboutme-puzzle
+{
+    width: 80rem;
+    height: 80rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 1rem;
+
+    .puzzle-button
+    {
+        padding: 0.5rem 0.5rem;
+        position: absolute;
+        z-index: 1;
+        background-color: cornflowerblue;
+        border-radius: 50%;
+        box-shadow: 0px 15px 0px 1px darkblue ;
+        transition: 1s;
+
+        .material-icons
+        {
+            font-size: 5rem;
+            display: block;
+        }
+    }
+
+    #button
+    {
+        width: 5rem;
+        height: 5rem;
+        position: absolute;
+        z-index: 2;
+        opacity: 0;
+    }
+    
+    #button:checked ~ .puzzle-button
+    {
+        transform: translateY(25%);
+        box-shadow: 0px 1px 0px 0px darkblue ;
+        color: #fff; 
+    }
+
+    #button:checked ~ .puzzle-circle
+    {
+        transform: rotate(0deg);
+    }
+
+    .puzzle-circle
+    {
+        border: solid 1px springgreen;
+        border-radius:  50%;
+        position: absolute;
+        overflow: hidden;
+        transition: 3s;
+
+        .puzzle-imgback
+        {
+            width: 80rem;
+            height: 80rem;
+            position: relative;
+            background-image: url("/landrescobarl.github.io/laboratory-object/pexels-ken-tomita-389818\ \(2\).jpg");
+            background-position: center;
+            background-size: cover;
+            border-radius: 50%;
+            opacity: 0.3;
+        }
+
+        .puzzle-contents
+        {
+            border: solid red 1px;
+            width: 75rem;
+            height: 75rem;
+            position: absolute;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+
+            .puzzle-title
+            {
+                font-size: 2.2rem;
+                margin-top: 2rem;
+            }
+
+            .puzzle-name
+            {
+                font-size: 3.2rem;
+                margin-top: -5rem;
+            }
+
+            .puzzle-text
+            {
+                display: block;
+                width: 70rem;
+                margin-bottom: 25rem;
+                font-size: 1.8rem;
+            }
+        }
+
+    }
+
+    .circle-1
+    {
+        width: 80rem;
+        height: 80rem;
+        transform: rotate(145deg);
+
+        .puzzle-contents
+        {
+            top: 2.5rem;
+            left: 2.5rem;
+        }
+    }
+
+    .puzzle-back
+    {
+        width: 60rem;
+        height: 60rem;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 50%;
+    }
+
+    .circle-2
+    {
+        width: 60rem;
+        height: 60rem;
+        transform: rotate(-150deg);
+
+        .puzzle-imgback
+        {
+            top: -10rem;
+            left: -10rem;
+        }
+
+        .puzzle-contents
+        {
+            top: -7.5rem;
+            left: -7.5rem;
+        }
+    }
+
+    .puzzle-back2
+    {
+        width: 40rem;
+        height: 40rem;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 50%;
+    }
+
+    .circle-3
+    {
+        width: 40rem;
+        height: 40rem;
+        transform: rotate(145deg);
+
+        .puzzle-imgback
+        {
+            top: -20rem;
+            left: -20rem;
+        }
+
+        .puzzle-contents
+        {
+            top: -17.5rem;
+            left: -17.5rem;
+        }
+    }
+}
+
+
+
+
