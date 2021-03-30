@@ -72,7 +72,7 @@
     {
         .puzzle-item
         {
-            border: var(--color-yello) solid 0.2rem;
+            border: var(--color-morado) solid 0.2rem;
         }
     }
 
@@ -80,7 +80,7 @@
     {
         .puzzle-item
         {
-            background-color: var(--color-yello);
+            background-color: var(--color-morado);
         }
     }
 
@@ -310,7 +310,7 @@
     #puzzle-buttom:checked ~ .piece-8
     {
         top: 100%;
-        left: 15%;
+        left: 5%;
         transform: rotate(130deg);
     }
 

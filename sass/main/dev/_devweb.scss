@@ -1,0 +1,144 @@
+.body__devweb
+{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: relative;
+    background-color: white;
+    margin-top: 10rem;
+
+    .devweb-conteiner
+    {
+        width: 100%;
+        height: 100%;
+
+        .devweb-contents
+        {
+            width: 45%;
+            position: absolute;
+            top: 5%;
+            left: 5%;
+
+            .devweb-title
+            {
+                font-size: 2.2rem;
+                font-family:  var(--family-Raleway);
+                margin-bottom: 1rem;
+            }
+
+            .devweb-subtitle
+            {
+                font-size: 1.8rem;
+                font-family: var(--family-Raleway);
+                margin-bottom: 3rem;
+            }
+
+            .devweb-text
+            {
+                font-size: 1.6rem;
+                font-family: var(--family-open);
+                margin-bottom: 1rem;
+            }
+
+            .devweb-skills
+            {
+                .devweb-subtitle
+                {
+                    margin-bottom: 1rem;
+                }
+
+                .devweb-skill
+                {
+                    font-size: 1.6rem;
+                    font-family: var(--family-open);
+                    margin-left: 4rem;
+                }
+            }
+
+        }
+        
+        .devweb-medals
+        {
+            width: 100rem;
+            height: 85rem;
+            float: right;
+            background-image: url(/landrescobarl.github.io/img/back-dev.png);
+            background-position: right; 
+            background-repeat: no-repeat; 
+            background-size: 110%;
+            position: absolute;
+            right: 0rem;
+            top: 0rem;
+            bottom: 0rem;
+
+            .devweb-imgs
+            {
+                width: 85rem;
+                height: 85rem;
+                position: absolute;
+                display: grid;
+                right: 0rem;
+
+                .devweb-img
+                {
+                    position: absolute;
+                }
+
+                :first-child
+                {
+                    bottom: 17.5rem;
+                    left: -1rem;
+                    width: 12%;
+                }
+
+                :nth-child(2)
+                {
+                    bottom: 17.5rem;
+                    left: 10rem;
+                    width: 12%;
+                }
+
+                :nth-child(3)
+                {
+                    bottom: 22rem;
+                    left: 25rem;
+                }
+
+                :nth-child(4)
+                {
+                    bottom: 29.5rem;
+                    left: 11.5rem;
+                }
+
+                :nth-child(5)
+                {
+                    bottom: 37rem;
+                    right: 40.5rem;
+                }
+
+                :nth-child(6)
+                {
+                    top: 32.5rem;
+                    right: 26rem;
+                    width: 12%;
+                }
+
+
+                :nth-child(7)
+                {
+                    top: 32.5rem;
+                    right: 15rem;
+                    width: 12%;
+                }
+
+                :last-child
+                {
+                    bottom: 22rem;
+                    left: 39rem;
+                }
+            }
+        }
+    }
+
+
+}

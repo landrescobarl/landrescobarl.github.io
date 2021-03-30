@@ -25,7 +25,6 @@ a
 @import "structure/structura.scss";
 @import "head/head";
 @import "network/network";
-@import "main/home/puzzle.scss";
 @import "main/main";
 @import "cv/cv.scss";
 @import "foot/foot.scss";
@@ -38,19 +37,13 @@ a
 // mobil-a
 @media only screen and (min-width: 319px) and (max-width: 425px) 
 {
-    @import "structure/screen-320";
     @import "head/menu2";
-    @import "network/carousel-320";
-    @import "main/main-320";
-    @import "main/home/puzzle-320";
 }
 
 // movil-b
 @media only screen and (min-width: 425px) and (max-width: 768px) 
 {
     @import "head/menu2";
-    @import "main/main-425";
-    @import "main/home/puzzle-425";
 }
 
 // movil/table
@@ -68,7 +61,7 @@ a
 // laptop/desktop
 @media only screen and (min-width: 1440px)
 {
-    @import "structure/screen-1440";
+
 }
 
 /*
@@ -79,8 +72,10 @@ a
 
 :root {
     --color-blue:  #069FFA;
+    --color-blue2: #1575AD;
     --color-yello: #FAF51E;
     --color-black: #323232;
+    --color-morado: #AB0AAD;
     --family-open: 'Open Sans', sans-serif; 
     --family-Raleway: 'Raleway', sans-serif;
     --family-kalam: 'Kalam', cursive;

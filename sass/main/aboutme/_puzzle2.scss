@@ -1,0 +1,248 @@
+
+    @keyframes cambio {
+        0% {font-size: 4rem;}
+        100% {font-size: 4.8rem;}
+    }
+//animation: cambio 20s infinite;
+
+.body__aboutme
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #fff;
+    margin: 20rem 0rem;
+
+
+    .aboutme-puzzle
+    {
+        width: 50%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .puzzle-action
+        {
+            position: absolute;
+            bottom: 5%;
+            right: -30%;
+            transform: rotate(-30deg);
+            animation: cambio 0.6s infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            font-size: 4rem;
+        }
+
+        .puzzle-button
+        {
+            padding: 0.5rem 0.5rem;
+            position: absolute;
+            z-index: 1;
+            background-color: var(--color-blue);
+            border-radius: 50%;
+            border: var(--color-blue2) solid 0.5px;
+            box-shadow: 0.5px 10px 0.5px 0px var(--color-blue2);
+            transition: 1s;
+            bottom: 15%;
+            right: -25%;
+    
+            .material-icons
+            {
+                font-size: 5rem;
+                display: block;
+            }
+        }
+    
+        #button
+        {
+            width: 5rem;
+            height: 5rem;
+            position: absolute;
+            z-index: 2;
+            opacity: 0;
+        }
+        
+        #button:checked ~ .puzzle-button
+        {
+            transform: translateY(25%);
+            box-shadow: 0px 1px 0px 0px var(--color-blue2);
+            color: #fff; 
+        }
+    
+        #button:checked ~ .puzzle-circle
+        {
+            transform: rotate(0deg);
+        }
+
+        .puzzle-circle
+        {
+            border-radius:  50%;
+            position: absolute;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            transition: 3s;
+            border: rgba(0, 0, 0, 0.001) solid 0.01px;
+
+            .puzzle-imgback
+            {
+                width: 80rem;
+                height: 80rem;
+                position: absolute;
+                background-image: url("/landrescobarl.github.io/img/aboutme-img2.jpg");
+                background-position: center;
+                background-size: cover;
+                border-radius: 50%;
+                opacity: 0.5;
+            }
+
+            .puzzle-contents
+            {
+                width: 72rem;
+                height: 100%;
+                position: absolute;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            
+                .puzzle-title
+                {
+                    font-size: 2.2rem;
+                    font-family: var(--family-Raleway);
+                    display: block;
+                    position: relative;
+                    top: -15%;
+                }
+            
+                .puzzle-name
+                {
+                    font-size: 3.2rem;
+                    font-family: var(--family-Raleway);
+                    display: block;
+                    position: relative;
+                    top: -10%;
+                }
+            
+                .puzzle-text
+                {
+                    font-size: 1.6rem;
+                    font-family: var(--family-open);
+                    display: block;
+                    position: relative;
+                }
+
+                .text-2
+                {
+                    margin-top: 2rem;
+                }
+
+                a
+                {
+                    font-size: 1.8rem;
+                    font-family: var(--family-Raleway);
+                    padding: 1rem 1rem;
+                    color: #fff;
+                    display: block;
+                    width: 20rem;
+                    position: relative;
+                    border-radius: 5px;
+                }
+
+                .puzzle-dev
+                {
+                    background-color: var(--color-blue);
+                    left: 15rem;
+
+                }
+
+                .puzzle-tec
+                {
+                    background-color: var(--color-morado);
+                    left: -15rem;
+                    top: 4rem;
+                }
+            }
+
+        }
+
+        .circle-1
+        {
+            width: 80rem;
+            height: 80rem;
+            transform: rotate(145deg);
+        }
+
+        .puzzle-back
+        {
+            width: 60rem;
+            height: 60rem;
+            position: absolute;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+
+        .circle-2
+        {
+            width: 60rem;
+            height: 60rem;
+            transform: rotate(-150deg);
+
+
+            .puzzle-imgback
+            {
+                top: -10rem;
+                left: -10rem;
+            }
+        }
+
+        .puzzle-back2
+        {
+            width: 40rem;
+            height: 40rem;
+            position: absolute;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+
+        .circle-3
+        {
+            width: 40rem;
+            height: 40rem;
+            transform: rotate(145deg);
+
+            .puzzle-imgback
+            {
+                top: -20rem;
+                left: -20rem;
+            }
+
+            .puzzle-contents
+            {
+                .puzzle-title
+                {
+                    top: -15rem;
+                }
+
+                .puzzle-name
+                {
+                    top: -6rem;
+                }
+            }
+
+        }
+    }
+}   
+
+
+
+
+
+
+
