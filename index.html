@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src=""></script>
 </head>
 
 <body>
@@ -35,9 +36,9 @@
 
             <ol class="menu-container">
 
-                <li class="menu-item"><a href="#" class="menu-link"> Home </a></li>
-                <li class="menu-item"><a href="#" class="menu-link"> About </a></li>
-                <li class="menu-item"><a href="#" class="menu-link"> Contact </a></li>
+                <li class="menu-item"><a href="#home" class="menu-link"> Home </a></li>
+                <li class="menu-item"><a href="#aboutme" class="menu-link"> About </a></li>
+                <li class="menu-item"><a href="#contact" class="menu-link"> Contact </a></li>
                 <li class="menu-item"><a href="#" class="menu-link"> Blog </a></li>
 
             </ol>
@@ -73,7 +74,7 @@
 
     <!-- MAIN -->
     <main class="body">
-        <section class="body__home">
+        <section class="body__home" id="home">
             <article class="home__puzzle">
 
                 <input type="checkbox" id="puzzle-buttom">
@@ -196,8 +197,8 @@
             </article>
 
         </section>
-        <section class="body__aboutme">
-            <div class="aboutme-puzzle">
+        <section class="body__aboutme" id="aboutme">
+            <article class="aboutme-puzzle">
 
                 <input type="checkbox" id="button">
                 <label for="button" class="puzzle-button">
@@ -289,14 +290,152 @@
                             a nivel académico, llegar la tecnologia y posterios a la ingeniería
                             de software.
                         </p>
-                        <a href="#" class="puzzle-tec">Tec Sistemas</a>
-                        <a href="#" class="puzzle-dev">Dev Web </a>
+                        <a href="#devweb" class="puzzle-tec">Tec Sistemas</a>
+                        <a href="#tecsis" class="puzzle-dev">Dev Web </a>
                     </div>
 
                 </div>
 
-            </div>
+            </article>
 
+        </section>
+        <section class="body__devweb" id="devweb">
+            <article class="devweb-conteiner">
+                <div class="devweb-contents">
+                    <h2 class="devweb-title">Developer Web</h2>
+                    <h3 class="devweb-subtitle">Front-end Junior</h3>
+                    <P class="devweb-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Provident autem adipisci debitis repellat doloribus cupiditate
+                        assumenda commodi ratione? Rem dicta ab a necessitatibus
+                        molestiae perferendis, aperiam laborum quos eos qui!
+                    </P>
+
+                    <ul class="devweb-skills">
+                        <h3 class="devweb-subtitle">Skill:</h3>
+                        <li class="devweb-skill">HTML</li>
+                        <li class="devweb-skill">CSS</li>
+                        <li class="devweb-skill">Sass</li>
+                        <li class="devweb-skill">JavaScript</li>
+                        <li class="devweb-skill">Git & GitHub</li>
+                        <li class="devweb-skill">Desing Web</li>
+                        <li class="devweb-skill">Date Base</li>
+                        <li class="devweb-skill">SQL</li>
+                    </ul>
+
+                </div>
+                <div class="devweb-medals">
+
+                    <figure class="devweb-imgs">
+                        <img src="/landrescobarl.github.io/img/html.png" alt="html" class="devweb-img">
+                        <img src="/landrescobarl.github.io/img/css.png" alt="css" class="devweb-img">
+                        <img src="/landrescobarl.github.io/img/js.png" alt="JavaScript" class="devweb-img">
+                        <img src="/landrescobarl.github.io/img/git & github.png" alt="git & github" class="devweb-img">
+                        <img src="/landrescobarl.github.io/img/disene.png" alt="Diseno" class="devweb-img">
+                        <img src="/landrescobarl.github.io/img/db.png" alt="Bases de datos" class="devweb-img">
+                        <img src="/landrescobarl.github.io/img/sql.png" alt="SQL" class="devweb-img">
+                        <img src="/landrescobarl.github.io/img/sass.png" alt="sass" class="devweb-img">
+                    </figure>
+
+                </div>
+            </article>
+        </section>
+        <section class="body__tecsis" id="tecsis">
+            <article class="tecsis-conteiner">
+                <div class="tecsis-contents">
+                    <h2 class="tecsis-title">Developer Web</h2>
+                    <h3 class="tecsis-subtitle">Front-end Junior</h3>
+                    <P class="tecsis-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Provident autem adipisci debitis repellat doloribus cupiditate
+                        assumenda commodi ratione? Rem dicta ab a necessitatibus
+                        molestiae perferendis, aperiam laborum quos eos qui!
+                    </P>
+
+                    <ul class="tecsis-skills">
+                        <h3 class="tecsis-subtitle">Skill:</h3>
+                        <li class="tecsis-skill">HTML</li>
+                        <li class="tecsis-skill">CSS</li>
+                        <li class="tecsis-skill">Sass</li>
+                        <li class="tecsis-skill">JavaScript</li>
+                        <li class="tecsis-skill">JavaScript</li>
+                    </ul>
+
+                </div>
+                <div class="tecsis-medals">
+
+                    <figure class="tecsis-imgs">
+                        <img src="/landrescobarl.github.io/img/redes.png" alt="redes" class="tecsis-img">
+                        <img src="/landrescobarl.github.io/img/Resolucion.png" alt="resolucion" class="tecsis-img">
+                        <img src="/landrescobarl.github.io/img/office.png" alt="Office" class="tecsis-img">
+                        <img src="/landrescobarl.github.io/img/mpc.png" alt="Mantenimiento preventivo y correctivo"
+                            class="tecsis-img">
+                        <img src="/landrescobarl.github.io/img/soporte.png" alt="soporte" class="tecsis-img">
+                    </figure>
+
+                </div>
+            </article>
+        </section>
+        <section class="body__contact" id="contact">
+            <article class="contact-conteiner">
+                <div class="contact-left">
+                    <p class="andres"><strong>Andres Felipe Escobar Palacio</strong></p>
+                    <div class="contact-logo">
+                        <span class="text-ae">
+                            &lt;AE&gt;
+                        </span>
+                    </div>
+                    <ul class="left-data">
+                        <li class="left-item">
+                            <p>addres.ep@gmail.com</p>
+                        </li>
+                        <li class="left-item"><p>La Estrella - Antioquia</p></li>
+                        <li class="left-item"><p> 3195017424</p></li>
+                    </ul>
+                </div>
+                <div class="contact-right">
+                    <form name="contact" method="POST" data-netlify="true" class="contact-form">
+                        <h2 class="form-title">Cobtact</h2>
+                        <p class="form-name">
+                            <label>Your Name: <input type="text" name="name" /></label>
+                        </p>
+                        <p class="form-email">
+                            <label>Your Email: <input type="email" name="email" /></label>
+                        </p>
+                        <p class="form-message">
+                            <label><span> Message:</span> <textarea name="message"></textarea></label>
+                        </p>
+                        <p class="buttom">
+                            <button type="submit">Send</button>
+                        </p>
+                
+                        <nav class="contac-nav">
+                            <ul class="contac-menu">
+                                <li class="contac-item"><a href="www.linkedin.com/in/landresescobarl/" target="_blank" class="contac-link">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li class="contac-item"><a href="https://www.facebook.com/profile.php?id=100045079129359" target="_blank"
+                                        class="contac-link">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="contac-item"><a href="https://twitter.com/IAndresEscobarI" target="_blank" class="contac-link">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="contac-item"><a href="https://github.com/landrescobarl/landrescobarl.github.io" target="_blank"
+                                        class="contac-link">
+                                        <i class="fa fa-github"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                
+                    </form>
+
+                </div>
+            </article>
         </section>
     </main>
 
