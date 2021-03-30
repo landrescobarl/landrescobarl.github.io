@@ -50,12 +50,23 @@
             transition: 1s;
             bottom: 15%;
             right: -25%;
+
     
             .material-icons
             {
                 font-size: 5rem;
                 display: block;
             }
+        }
+
+        #puzzle-buttom:hover
+        {
+            cursor: pointer;
+        }
+
+        #button:hover
+        {
+            cursor: pointer;
         }
     
         #button
@@ -94,7 +105,7 @@
                 width: 80rem;
                 height: 80rem;
                 position: absolute;
-                background-image: url("/landrescobarl.github.io/img/aboutme-img2.jpg");
+                background-image: url("https://firebasestorage.googleapis.com/v0/b/landrescobarl.appspot.com/o/img%2Faboutme-img2.jpg?alt=media&token=2235d239-f763-4ba8-96cc-8884c7aa4d2c");
                 background-position: center;
                 background-size: cover;
                 border-radius: 50%;

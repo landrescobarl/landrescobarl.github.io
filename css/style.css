@@ -198,7 +198,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(/landrescobarl.github.io/img/capa.png);
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/landrescobarl.appspot.com/o/img%2Fcapa.png?alt=media&token=f794c9b2-5305-42e3-8b37-d51a74324628);
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -516,6 +516,12 @@ body {
   font-size: 5rem;
   display: block;
 }
+.body__aboutme .aboutme-puzzle #puzzle-buttom:hover {
+  cursor: pointer;
+}
+.body__aboutme .aboutme-puzzle #button:hover {
+  cursor: pointer;
+}
 .body__aboutme .aboutme-puzzle #button {
   width: 5rem;
   height: 5rem;
@@ -544,7 +550,7 @@ body {
   width: 80rem;
   height: 80rem;
   position: absolute;
-  background-image: url("/landrescobarl.github.io/img/aboutme-img2.jpg");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/landrescobarl.appspot.com/o/img%2Faboutme-img2.jpg?alt=media&token=2235d239-f763-4ba8-96cc-8884c7aa4d2c");
   background-position: center;
   background-size: cover;
   border-radius: 50%;
@@ -691,7 +697,7 @@ body {
   width: 100rem;
   height: 85rem;
   float: right;
-  background-image: url(/landrescobarl.github.io/img/back-dev.png);
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/landrescobarl.appspot.com/o/img%2Fback-dev.png?alt=media&token=9c967639-84d4-414c-97f1-c2eb4339cf2a);
   background-position: right;
   background-repeat: no-repeat;
   background-size: 110%;
@@ -793,7 +799,7 @@ body {
   width: 100rem;
   height: 85rem;
   float: right;
-  background-image: url(/landrescobarl.github.io/img/back-tec.png);
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/landrescobarl.appspot.com/o/img%2Fback-tec.png?alt=media&token=5438bf35-fe31-421d-b81c-77970ef333e9);
   background-position: left;
   background-repeat: no-repeat;
   background-size: 110%;
@@ -849,7 +855,7 @@ body {
 .body__contact .contact-conteiner .contact-left {
   width: 39.5rem;
   height: 45rem;
-  background-image: url(/landrescobarl.github.io/img/back_contac.png);
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/landrescobarl.appspot.com/o/img%2Fback_contac.png?alt=media&token=9e73b866-1ea3-4777-a0a9-27f9b62a25ec);
   text-align: center;
   padding: 10rem 2rem;
   float: left;
@@ -1014,7 +1020,7 @@ body {
 .foot .foot__firma {
   width: 11.1rem;
   height: 4rem;
-  background-image: url("/landrescobarl.github.io/img/firma.png");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/landrescobarl.appspot.com/o/img%2Ffirma.png?alt=media&token=a055b89f-cb5d-4291-9f10-1f6d4b2dd6a8");
   background-repeat: no-repeat;
   background-size: cover;
 }
